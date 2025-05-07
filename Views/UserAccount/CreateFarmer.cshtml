@@ -1,0 +1,18 @@
+﻿@model Agri_EnergyConnect.Models.User
+<h1>Hello employee, please create a new user below</h1>
+
+<form asp-action="CreateFarmer" method="post">
+    <input type="email" asp-for="@Model.Email" placeholder="Email@gmail.com" required/>
+    <br/>
+    <input type="text" asp-for="@Model.Username" placeholder="Username" required/>
+    <br/>
+    <input type="password"  placeholder="Password" name="Password" id="Password" required/>
+    <br/>
+    <input type="password" placeholder="Confirm password" name="ConfirmPassword" id="ConfirmPassword" required/>
+    <br/>
+    <input type="submit" class="btn btn-primary" text="Create"/>
+</form>
+
+
+
+
