@@ -1,1 +1,30 @@
-﻿<h1>This is a Created Product page</h1>
+﻿@model Agri_EnergyConnect.Models.Product
+<h1>Create a New Product</h1>
+<p>Please fill out the form below to create a new product.</p>
+
+<form asp-action="CreateProduct" method="post" enctype="multipart/form-data" style="max-width: 400px; margin: auto; padding: 20px; border: 1px solid #ccc; border-radius: 10px; background-color: #f9f9f9;">
+    <div style="margin-bottom: 15px;">
+        <label for="ProductName" style="display: block; font-weight: bold;">Product name</label>
+        <input type="text" asp-for="@Model.ProductName" id="ProductName" placeholder="Enter a product name" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"/>
+    </div>
+    <div style="margin-bottom: 15px;">
+        <label for="ProductType" style="display: block; font-weight: bold;">Product type</label>
+        <input type="text" asp-for="@Model.ProductType" id="ProductType" placeholder="Enter product type" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"/>
+    </div>
+    <div style="margin-bottom: 15px;">
+        <label for="ProductDescription" style="display: block; font-weight: bold;">Product description</label>
+        <textarea cols="10" type="text" asp-for="@Model.ProductDescription" name="ProductDescription" id="ProductDescription" placeholder="Enter a description" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"></textarea>
+    </div>
+    <div style="margin-bottom: 15px;">
+        <label for="Quantity" style="display: block; font-weight: bold;">Quantity</label>
+        <input type="number" name="Quantity" asp-for="@Model.Quantity" id="Quantity" placeholder="Quantity (if applicable)" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"/>
+    </div>
+    <div style="margin-bottom: 15px;">
+        <label for="ProductImage" style="display: block; font-weight: bold;">Product Image</label>
+        <input type="file" name="ProductImage" asp-for="ProductImages" id="ProductImage" accept="image/*" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" />
+    </div>
+    <div style="text-align: center;">
+        <input type="submit" class="btn btn-primary" value="Add product" style="padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;"/>
+    </div>
+    
+</form>

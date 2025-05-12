@@ -14,6 +14,8 @@ builder.Services.AddDbContext<AgriEnergyConnectDbContext>();
 
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IFarmerRepository, FarmerRepository>();
+builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<IProductImageService, ProductImageService>();
 builder.Services.AddHttpContextAccessor();
 
 builder.Services.AddScoped<ICurrentUserService, CurrentUserService>();

@@ -33,6 +33,7 @@ namespace Agri_EnergyConnect.Controllers
         public async Task<ActionResult> FillFarmerDetails(Farmer farmer){
             if (ModelState.IsValid)
             {
+                farmer.FarmerId = Math.Abs(Guid.NewGuid().GetHashCode());
                 // Save the farmer to the database
                 await _farmerRepository.Insert(farmer);
                 await _farmerRepository.SaveAsync();

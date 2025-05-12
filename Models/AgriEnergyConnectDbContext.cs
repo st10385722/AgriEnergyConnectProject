@@ -19,6 +19,8 @@ public partial class AgriEnergyConnectDbContext : DbContext
 
     public virtual DbSet<Product> Products { get; set; }
 
+    public virtual DbSet<ProductImage> ProductImages { get; set; }
+
     public virtual DbSet<User> Users { get; set; }
 
     public virtual DbSet<UserRole> UserRoles { get; set; }
@@ -63,7 +65,7 @@ public partial class AgriEnergyConnectDbContext : DbContext
 
         modelBuilder.Entity<Product>(entity =>
         {
-            entity.HasKey(e => e.ProductId).HasName("PK__PRODUCT__47027DF5E4F904CD");
+            entity.HasKey(e => e.ProductId).HasName("PK__PRODUCT__47027DF5A2EE7320");
 
             entity.ToTable("PRODUCT");
 
@@ -84,10 +86,37 @@ public partial class AgriEnergyConnectDbContext : DbContext
                 .IsUnicode(false)
                 .HasColumnName("product_type");
             entity.Property(e => e.Quantity).HasColumnName("quantity");
+            entity.Property(e => e.UpdatedAt)
+                .HasColumnType("datetime")
+                .HasColumnName("updated_at");
 
             entity.HasOne(d => d.Farmer).WithMany(p => p.Products)
                 .HasForeignKey(d => d.FarmerId)
-                .HasConstraintName("FK__PRODUCT__farmer___4F7CD00D");
+                .HasConstraintName("FK__PRODUCT__farmer___52593CB8");
+        });
+
+        modelBuilder.Entity<ProductImage>(entity =>
+        {
+            entity.HasKey(e => e.ImageId).HasName("PK__PRODUCT___DC9AC95558D620A2");
+
+            entity.ToTable("PRODUCT_IMAGE");
+
+            entity.Property(e => e.ImageId)
+                .ValueGeneratedNever()
+                .HasColumnName("image_id");
+            entity.Property(e => e.ContentType)
+                .HasMaxLength(100)
+                .HasColumnName("content_type");
+            entity.Property(e => e.CreatedAt).HasColumnName("created_at");
+            entity.Property(e => e.FileName)
+                .HasMaxLength(255)
+                .HasColumnName("file_name");
+            entity.Property(e => e.ImageData).HasColumnName("image_data");
+            entity.Property(e => e.ProductId).HasColumnName("product_id");
+
+            entity.HasOne(d => d.Product).WithMany(p => p.ProductImages)
+                .HasForeignKey(d => d.ProductId)
+                .HasConstraintName("FK__PRODUCT_I__produ__5812160E");
         });
 
         modelBuilder.Entity<User>(entity =>

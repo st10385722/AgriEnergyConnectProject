@@ -17,7 +17,11 @@ public partial class Product
 
     public DateTime CreatedAt { get; set; }
 
+    public DateTime? UpdatedAt { get; set; }
+
     public int? FarmerId { get; set; }
 
     public virtual Farmer? Farmer { get; set; }
+
+    public virtual ICollection<ProductImage> ProductImages { get; set; } = new List<ProductImage>();
 }

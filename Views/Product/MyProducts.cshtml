@@ -17,6 +17,8 @@
             <th>Description</th>
             <th>Quantity</th>
             <th>Created At</th>
+            <th>Updated At</th>
+            <th>Image</th>
         </tr>
     </thead>
     <tbody>
@@ -28,7 +30,61 @@
                 <td>@product.ProductDescription</td>
                 <td>@product.Quantity</td>
                 <td>@product.CreatedAt.ToString("yyyy-MM-dd")</td>
+                <td>
+                    @if (product.UpdatedAt.HasValue)
+                    {
+                        @product.UpdatedAt.Value.ToString("yyyy-MM-dd")
+                    }
+                    else
+                    {
+                        <span>N/A</span>
+                    }
+                </td>
+                <td>
+                    @if (product.ProductImages != null && product.ProductImages.Any(img => img.ProductId == product.ProductId))
+                    {
+                        var matchingImage = product.ProductImages.First(img => img.ProductId == product.ProductId);
+                        <a href="#" onclick="showImage('@Url.Action("GetProductImage", "Product", new { imageId = matchingImage.ImageId })')">
+                            View Image
+                        </a>
+                    }
+                    else
+                    {
+                        <span>No Image</span>
+                    }
+                </td>
             </tr>
         }
     </tbody>
 </table>
+
+<!-- Modal to display the image -->
+<div id="imageModal" class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Product Image</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close" onclick="closeModal()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body text-center">
+                <img id="productImage" src="" alt="Product Image" style="max-width: 100%; max-height: 400px;" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function showImage(imageUrl) {
+        const modal = document.getElementById('imageModal');
+        const img = document.getElementById('productImage');
+        img.src = imageUrl;
+        modal.style.display = 'block';
+    }
+
+    function closeModal() {
+        const modal = document.getElementById('imageModal');
+        modal.style.display = 'none';
+    }
+</script>
