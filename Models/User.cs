@@ -19,11 +19,7 @@ public partial class User
 
     public int CreatedBy { get; set; }
 
-    public virtual User CreatedByNavigation { get; set; } = null!;
-
-    public virtual ICollection<User> InverseCreatedByNavigation { get; set; } = new List<User>();
-
-    public virtual ICollection<Product> Products { get; set; } = new List<Product>();
+    public virtual ICollection<Farmer> Farmers { get; set; } = new List<Farmer>();
 
     public virtual UserRole Role { get; set; } = null!;
 }

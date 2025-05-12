@@ -15,6 +15,8 @@ public partial class AgriEnergyConnectDbContext : DbContext
     {
     }
 
+    public virtual DbSet<Farmer> Farmers { get; set; }
+
     public virtual DbSet<Product> Products { get; set; }
 
     public virtual DbSet<User> Users { get; set; }
@@ -27,9 +29,41 @@ public partial class AgriEnergyConnectDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.Entity<Farmer>(entity =>
+        {
+            entity.HasKey(e => e.FarmerId).HasName("PK__FARMER__C61558255A8D15B7");
+
+            entity.ToTable("FARMER");
+
+            entity.Property(e => e.FarmerId)
+                .ValueGeneratedNever()
+                .HasColumnName("farmer_id");
+            entity.Property(e => e.CropType)
+                .IsUnicode(false)
+                .HasColumnName("crop_type");
+            entity.Property(e => e.FarmName)
+                .IsUnicode(false)
+                .HasColumnName("farm_name");
+            entity.Property(e => e.FarmType)
+                .IsUnicode(false)
+                .HasColumnName("farm_type");
+            entity.Property(e => e.HavestingDate)
+                .HasColumnType("datetime")
+                .HasColumnName("havesting_date");
+            entity.Property(e => e.LivestockType)
+                .IsUnicode(false)
+                .HasColumnName("livestock_type");
+            entity.Property(e => e.NumberOfEmployees).HasColumnName("number_of_employees");
+            entity.Property(e => e.UserId).HasColumnName("user_id");
+
+            entity.HasOne(d => d.User).WithMany(p => p.Farmers)
+                .HasForeignKey(d => d.UserId)
+                .HasConstraintName("FK__FARMER__user_id__4CA06362");
+        });
+
         modelBuilder.Entity<Product>(entity =>
         {
-            entity.HasKey(e => e.ProductId).HasName("PK__PRODUCT__47027DF5A1F36B28");
+            entity.HasKey(e => e.ProductId).HasName("PK__PRODUCT__47027DF5E4F904CD");
 
             entity.ToTable("PRODUCT");
 
@@ -37,24 +71,23 @@ public partial class AgriEnergyConnectDbContext : DbContext
                 .ValueGeneratedNever()
                 .HasColumnName("product_id");
             entity.Property(e => e.CreatedAt)
-                .HasDefaultValueSql("(getdate())")
                 .HasColumnType("datetime")
                 .HasColumnName("created_at");
-            entity.Property(e => e.CreatedBy).HasColumnName("created_by");
-            entity.Property(e => e.Description)
+            entity.Property(e => e.FarmerId).HasColumnName("farmer_id");
+            entity.Property(e => e.ProductDescription)
                 .IsUnicode(false)
-                .HasColumnName("description");
-            entity.Property(e => e.Name)
-                .HasMaxLength(255)
+                .HasColumnName("product_description");
+            entity.Property(e => e.ProductName)
                 .IsUnicode(false)
-                .HasColumnName("name");
-            entity.Property(e => e.Price)
-                .HasColumnType("decimal(10, 2)")
-                .HasColumnName("price");
+                .HasColumnName("product_name");
+            entity.Property(e => e.ProductType)
+                .IsUnicode(false)
+                .HasColumnName("product_type");
+            entity.Property(e => e.Quantity).HasColumnName("quantity");
 
-            entity.HasOne(d => d.CreatedByNavigation).WithMany(p => p.Products)
-                .HasForeignKey(d => d.CreatedBy)
-                .HasConstraintName("FK__PRODUCT__created__4222D4EF");
+            entity.HasOne(d => d.Farmer).WithMany(p => p.Products)
+                .HasForeignKey(d => d.FarmerId)
+                .HasConstraintName("FK__PRODUCT__farmer___4F7CD00D");
         });
 
         modelBuilder.Entity<User>(entity =>
@@ -82,11 +115,6 @@ public partial class AgriEnergyConnectDbContext : DbContext
                 .HasMaxLength(20)
                 .IsUnicode(false)
                 .HasColumnName("username");
-
-            entity.HasOne(d => d.CreatedByNavigation).WithMany(p => p.InverseCreatedByNavigation)
-                .HasForeignKey(d => d.CreatedBy)
-                .OnDelete(DeleteBehavior.ClientSetNull)
-                .HasConstraintName("FK__USERS__created_b__3E52440B");
 
             entity.HasOne(d => d.Role).WithMany(p => p.Users)
                 .HasForeignKey(d => d.RoleId)

@@ -1,1 +1,23 @@
-﻿<h1>This is a login page</h1>
+﻿@model Agri_EnergyConnect.Models.User
+<h1>Sign in</h1>
+<p>Sign in now</p>
+
+<form asp-action="Login" method="post" style="max-width: 400px; margin: auto; padding: 20px; border: 1px solid #ccc; border-radius: 10px; background-color: #f9f9f9;">
+    <div style="margin-bottom: 15px;">
+        <label for="Email" style="display: block; font-weight: bold;">Email</label>
+        <input type="text" asp-for="@Model.Email" id="Email" placeholder="Enter your Email" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"/>
+    </div>
+    <div style="margin-bottom: 15px;">
+        <label for="Password" style="display: block; font-weight: bold;">Password</label>
+        <input type="password" name="Password" id="Password" placeholder="Enter a password" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"/>
+    </div>
+    @if(ViewBag.ErrorMessage != null)
+    {
+        <div style="color: red; text-align: center; margin-top: 10px;">
+            @ViewBag.ErrorMessage
+        </div>
+    }
+    <div style="text-align: center;">
+        <input type="submit" class="btn btn-primary" value="Login" style="padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;"/>
+    </div>
+</form>`

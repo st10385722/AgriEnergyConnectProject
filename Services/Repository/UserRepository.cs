@@ -13,10 +13,10 @@ public class UserRepository : IUserRepository
         _context = context;
     }
 
-    public User GetUserWithRole(string username){
+    public User GetUserWithRole(string email){
         return _context.Users
-            .Include(u => u.RoleId)
-            .FirstOrDefault(u => u.Username == username);
+            .Include(u => u.Role)
+            .FirstOrDefault(u => u.Email == email);
     }
 
     public UserRole getUserRole(int roleId){
@@ -26,16 +26,12 @@ public class UserRepository : IUserRepository
         return await _context.Users.ToListAsync();
     }
 
-    public async Task<User> GetById(string listingId){
-        return await _context.Users.FindAsync(listingId);
+    public async Task<User> GetById(int userId){
+        return await _context.Users.FindAsync(userId);
     }
 
-    public bool UsernameExists(string username){
-        return _context.Users.Any(u => u.Username == username);
-    }
-
-    public async Task<IEnumerable<User>> GetProductsByUserId(string userId){
-        return await _context.Users.Where(l => l.UserId.Equals(userId)).ToListAsync();
+    public bool EmailExists(string email){
+        return _context.Users.Any(u => u.Email == email);
     }
 
     public async Task Insert(User user){
@@ -45,7 +41,7 @@ public class UserRepository : IUserRepository
     public void Update(User user){
         _context.Entry(user).State = EntityState.Modified;
     }
-    public async Task Delete(string userId){
+    public async Task Delete(int userId){
         User user = await _context.Users.FindAsync(userId);
 
         if(user != null){

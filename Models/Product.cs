@@ -7,15 +7,17 @@ public partial class Product
 {
     public int ProductId { get; set; }
 
-    public string Name { get; set; } = null!;
+    public string ProductName { get; set; } = null!;
 
-    public string Description { get; set; } = null!;
+    public string ProductType { get; set; } = null!;
 
-    public decimal Price { get; set; }
+    public string ProductDescription { get; set; } = null!;
+
+    public int? Quantity { get; set; }
 
     public DateTime CreatedAt { get; set; }
 
-    public int? CreatedBy { get; set; }
+    public int? FarmerId { get; set; }
 
-    public virtual User? CreatedByNavigation { get; set; }
+    public virtual Farmer? Farmer { get; set; }
 }

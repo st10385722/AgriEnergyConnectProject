@@ -19,19 +19,68 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
+                    @if(User.Identity.IsAuthenticated)
+                    {
+                        <ul class="navbar-nav flex-grow-1">
+                            @if(User.IsInRole("employee"))
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="UserAccount" asp-action="CreateUser">Create Farmer</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="Farmer" asp-action="FarmerIndex">Farmers</a>
+                                </li>
+                            }
+                            @if(User.IsInRole("admin")){
+                                <li class="nav-item">
+                                    <a class="nav-link text-dark" asp-area="" asp-controller="UserAccount" asp-action="CreateUser">Create Employee</a>
+                                </li>
+                            }
+                        </ul>
+                    }
+                    <ul class="navbar-nav">
+                        @if(!User.Identity.IsAuthenticated)
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="" asp-controller="UserAccount" asp-action="Login">Login</a>
+                            </li>
+                        }
+                        else 
+                        {
+                            <li class="nav-item">
+                                <p class="nav-link text-dark">Welcome @User.Identity.Name</p>
+                            </li>
+                            <form asp-action="Logout" asp-controller="UserAccount" method="post">
+                                @Html.AntiForgeryToken()
+                                <button type="submit" class="nav-link text-dark">Logout</button>
+                            </form> 
+                        }
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
     <div class="container">
+        @if (User.Identity.IsAuthenticated && User.IsInRole("farmer"))
+        {
+            // Check if the logged-in user's UserId exists in the Farmer table
+            var userId = User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
+            var farmerExists = false;
+
+            using (var scope = Context.RequestServices.CreateScope())
+            {
+                var dbContext = scope.ServiceProvider.GetRequiredService<AgriEnergyConnectDbContext>();
+                farmerExists = dbContext.Farmers.Any(f => f.UserId.ToString() == userId);
+            }
+
+            if (!farmerExists)
+            {
+                <div class="alert alert-danger" role="alert">
+                    <strong>Warning:</strong> You have not filled in your farmer details. 
+                    <a asp-area="" asp-controller="Farmer" asp-action="FillFarmerDetails" asp-route-userId="@userId" class="alert-link">Click here to fill your details</a>.
+                </div>
+            }
+        }
         <main role="main" class="pb-3">
             @RenderBody()
         </main>

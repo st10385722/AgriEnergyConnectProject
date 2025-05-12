@@ -1,0 +1,122 @@
+﻿@model Agri_EnergyConnect.Models.Farmer
+
+<h1>Next, fill in farmer details</h1>
+<p>Enter text below</p>
+
+<form asp-action="FillFarmerDetails" method="post" style="max-width: 400px; margin: auto; padding: 20px; border: 1px solid #ccc; border-radius: 10px; background-color: #f9f9f9;">
+    <input type="hidden" asp-for="UserId" value="@ViewBag.UserId" />
+    <div style="margin-bottom: 15px;">
+        <label for="FarmName" style="display: block; font-weight: bold;">Farm Name</label>
+        <input type="text" asp-for="FarmName" id="FarmName" placeholder="Enter the farm name" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" />
+    </div>
+    <div style="margin-bottom: 15px;">
+        <label for="FarmType" style="display: block; font-weight: bold;">Farm Type</label>
+        <input type="text" asp-for="FarmType" id="FarmType" placeholder="Enter the type of farm (e.g., crop, livestock)" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" />
+    </div>
+    <div style="margin-bottom: 15px;">
+        <label for="HavestingDate" style="display: block; font-weight: bold;">Harvesting Date</label>
+        <input type="date" asp-for="HavestingDate" id="HavestingDate" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" />
+    </div>
+
+    <!-- Crop Type Section -->
+    <div style="margin-bottom: 15px;">
+        <input type="checkbox" id="enableCropType" onclick="toggleCropType()" />
+        <label for="enableCropType" style="font-weight: bold;">Add Crop Type</label>
+        <div id="cropTypeSection" style="display: none; margin-top: 10px;">
+            <input type="text" id="cropTypeInput" placeholder="Enter a crop type" style="width: 70%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" />
+            <button type="button" onclick="addCropType()" style="padding: 10px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">Add</button>
+            <ul id="cropTypeList" style="margin-top: 10px; padding-left: 20px;"></ul>
+        </div>
+    </div>
+
+    <!-- Livestock Type Section -->
+    <div style="margin-bottom: 15px;">
+        <input type="checkbox" id="enableLivestockType" onclick="toggleLivestockType()" />
+        <label for="enableLivestockType" style="font-weight: bold;">Add Livestock Type</label>
+        <div id="livestockTypeSection" style="display: none; margin-top: 10px;">
+            <input type="text" id="livestockTypeInput" placeholder="Enter a livestock type" style="width: 70%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" />
+            <button type="button" onclick="addLivestockType()" style="padding: 10px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;">Add</button>
+            <ul id="livestockTypeList" style="margin-top: 10px; padding-left: 20px;"></ul>
+        </div>
+    </div>
+
+    <div style="margin-bottom: 15px;">
+        <label for="NumberOfEmployees" style="display: block; font-weight: bold;">Number of Employees</label>
+        <input type="number" asp-for="NumberOfEmployees" id="NumberOfEmployees" placeholder="Enter the number of employees" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" />
+    </div>
+
+    <!-- Hidden fields to store crop and livestock types -->
+    <input type="hidden" id="CropType" name="CropType" />
+    <input type="hidden" id="LivestockType" name="LivestockType" />
+
+    <div style="text-align: center;">
+        <input type="submit" class="btn btn-primary" value="Create Farmer" style="padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;" />
+    </div>
+</form>
+
+<script>
+    function toggleCropType() {
+        const section = document.getElementById('cropTypeSection');
+        section.style.display = section.style.display === 'none' ? 'block' : 'none';
+    }
+
+    function toggleLivestockType() {
+        const section = document.getElementById('livestockTypeSection');
+        section.style.display = section.style.display === 'none' ? 'block' : 'none';
+    }
+
+    function addCropType() {
+        const input = document.getElementById('cropTypeInput');
+        const list = document.getElementById('cropTypeList');
+        const hiddenField = document.getElementById('CropType');
+
+        if (input.value.trim() !== '') {
+            const li = document.createElement('li');
+            li.textContent = input.value;
+            const removeButton = document.createElement('button');
+            removeButton.textContent = 'x';
+            removeButton.style.marginLeft = '10px';
+            removeButton.style.color = 'red';
+            removeButton.style.cursor = 'pointer';
+            removeButton.onclick = function () {
+                list.removeChild(li);
+                updateHiddenField(hiddenField, list);
+            };
+            li.appendChild(removeButton);
+            list.appendChild(li);
+
+            updateHiddenField(hiddenField, list);
+            input.value = '';
+        }
+    }
+
+    function addLivestockType() {
+        const input = document.getElementById('livestockTypeInput');
+        const list = document.getElementById('livestockTypeList');
+        const hiddenField = document.getElementById('LivestockType');
+
+        if (input.value.trim() !== '') {
+            const li = document.createElement('li');
+            li.textContent = input.value;
+            const removeButton = document.createElement('button');
+            removeButton.textContent = 'x';
+            removeButton.style.marginLeft = '10px';
+            removeButton.style.color = 'red';
+            removeButton.style.cursor = 'pointer';
+            removeButton.onclick = function () {
+                list.removeChild(li);
+                updateHiddenField(hiddenField, list);
+            };
+            li.appendChild(removeButton);
+            list.appendChild(li);
+
+            updateHiddenField(hiddenField, list);
+            input.value = '';
+        }
+    }
+
+    function updateHiddenField(hiddenField, list) {
+        const items = Array.from(list.children).map(li => li.firstChild.textContent);
+        hiddenField.value = items.join(',');
+    }
+</script>

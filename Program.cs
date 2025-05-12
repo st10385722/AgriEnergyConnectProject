@@ -13,6 +13,7 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<AgriEnergyConnectDbContext>();
 
 builder.Services.AddScoped<IUserRepository, UserRepository>();
+builder.Services.AddScoped<IFarmerRepository, FarmerRepository>();
 builder.Services.AddHttpContextAccessor();
 
 builder.Services.AddScoped<ICurrentUserService, CurrentUserService>();
@@ -72,9 +73,9 @@ using (var scope = app.Services.CreateScope())
     {
         var roles = new List<UserRole>
         {
-            new UserRole { RoleName = "farmer", RoleDescription = "Farmer role" },
-            new UserRole { RoleName = "employee", RoleDescription = "Employee role" },
-            new UserRole { RoleName = "admin", RoleDescription = "Administrator role" }
+            new UserRole { RoleId = 1, RoleName = "admin", RoleDescription = "Administrator role" },
+            new UserRole { RoleId = 2, RoleName = "employee", RoleDescription = "Employee role" },
+            new UserRole { RoleId = 3,RoleName = "farmer", RoleDescription = "Farmer role" }
         };
         
         await dbContext.UserRoles.AddRangeAsync(roles);
@@ -85,14 +86,33 @@ using (var scope = app.Services.CreateScope())
     var existingRoles = await dbContext.UserRoles.ToListAsync();
 
     // 2. Create Default Users
-    var defaultUsers = new[]
-    {
-        new { Username = "farmer@test.com", Password = "F@rmer1234",  Role = "farmer" },
-        new { Username = "employee@test.com", Password = "Emp!oyee123", Role = "employee" },
-        new { Username = "admin@test.com", Password = "Adm!n1234", Role = "admin" }
-    };
+var defaultUsers = new[]
+{
+    new { Username = "admin@test.com", Password = "Adm!n1234", Email = "admin@test.com", Role = "admin" },  
+    new { Username = "employee@test.com", Password = "Emp!oyee123", Email = "employee@test.com", Role = "employee" },  
+    new { Username = "farmer@test.com", Password = "F@rmer1234", Email = "farmer@test.com", Role = "farmer" }
+};
 
-    foreach (var user in defaultUsers)
+var systemUser = new User
+{
+    UserId = Math.Abs(Guid.NewGuid().GetHashCode()),
+    Username = "system",
+    PasswordHash = hasher.HashPassword(null, "Adm!n1234"),
+    Email = "systemadmin@systemadmin.com",
+    RoleId = existingRoles.First(r => r.RoleName == "admin").RoleId,
+    CreatedBy = 0,
+    CreatedAt = DateTime.UtcNow
+};
+
+// Add the system user to the database
+if (!await dbContext.Users.AnyAsync(u => u.Username == systemUser.Username))
+{
+    dbContext.Users.Add(systemUser);
+    await dbContext.SaveChangesAsync();
+}
+
+// Use the system user's UserId as the CreatedBy value for other users
+foreach (var user in defaultUsers)
 {
     if (!await dbContext.Users.AnyAsync(u => u.Username == user.Username))
     {
@@ -101,26 +121,21 @@ using (var scope = app.Services.CreateScope())
 
         var newUser = new User
         {
-            UserId = Guid.NewGuid().GetHashCode(), // Generate a unique UserId
+            UserId = Guid.NewGuid().GetHashCode(),
             Username = user.Username,
             PasswordHash = hasher.HashPassword(null, user.Password),
+            Email = user.Email,
             RoleId = role.RoleId,
-            CreatedBy = 1, // System user
+            CreatedBy = systemUser.UserId,
             CreatedAt = DateTime.UtcNow
         };
 
-        // Use AsNoTracking to avoid tracking conflicts
-        var existingUser = await dbContext.Users
-            .AsNoTracking()
-            .FirstOrDefaultAsync(u => u.UserId == newUser.UserId);
-
-        if (existingUser == null)
-        {
-            dbContext.Users.Add(newUser);
-            //dbContext.Entry(existingUser).State = EntityState.Detached;
-        }
+        dbContext.Users.Add(newUser);
     }
 }
 await dbContext.SaveChangesAsync();
 }
 app.Run();
+
+//references
+//https://www.farmbrite.com/post/essential-farm-records-and-data-you-need-to-be-tracking

@@ -4,12 +4,12 @@
 
 <form asp-action="CreateUserAction" method="post" style="max-width: 400px; margin: auto; padding: 20px; border: 1px solid #ccc; border-radius: 10px; background-color: #f9f9f9;">
     <div style="margin-bottom: 15px;">
-        <label for="Email" style="display: block; font-weight: bold;">Email Address</label>
-        <input type="email" asp-for="@Model.Email" id="Email" placeholder="Email@gmail.com" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"/>
+        <label for="Username" style="display: block; font-weight: bold;">First and last name</label>
+        <input type="text" asp-for="@Model.Username" id="Username" placeholder="Enter a username" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"/>
     </div>
     <div style="margin-bottom: 15px;">
-        <label for="Username" style="display: block; font-weight: bold;">Username</label>
-        <input type="text" asp-for="@Model.Username" id="Username" placeholder="Enter a username" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"/>
+        <label for="Email" style="display: block; font-weight: bold;">Email Address</label>
+        <input type="email" asp-for="@Model.Email" id="Email" placeholder="Email@gmail.com" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"/>
     </div>
     <div style="margin-bottom: 15px;">
         <label for="Password" style="display: block; font-weight: bold;">Password</label>

@@ -5,14 +5,13 @@ namespace Agri_EnergyConnect.Services.IRepository;
 
 public interface IUserRepository
 {
-    User GetUserWithRole(string username);
+    User GetUserWithRole(string email);
     UserRole getUserRole(int roleId);
-    bool UsernameExists(string username);
+    bool EmailExists(string email);
     Task<IEnumerable<User>> GetAll();
-    Task<User> GetById(string userId);
-    Task<IEnumerable<User>> GetProductsByUserId(string userId);
+    Task<User> GetById(int userId);
     Task Insert(User user);
     void Update(User user);
-    Task Delete(string userId);
+    Task Delete(int userId);
     Task SaveAsync();
 }

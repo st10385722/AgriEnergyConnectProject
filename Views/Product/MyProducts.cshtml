@@ -1,0 +1,34 @@
+﻿@model IEnumerable<Agri_EnergyConnect.Models.Product>
+
+<h1>My Products</h1>
+
+@if (!string.IsNullOrEmpty(ViewBag.WarningMessage))
+{
+    <div class="alert alert-warning" role="alert">
+        @ViewBag.WarningMessage
+    </div>
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Product Name</th>
+            <th>Product Type</th>
+            <th>Description</th>
+            <th>Quantity</th>
+            <th>Created At</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var product in Model)
+        {
+            <tr>
+                <td>@product.ProductName</td>
+                <td>@product.ProductType</td>
+                <td>@product.ProductDescription</td>
+                <td>@product.Quantity</td>
+                <td>@product.CreatedAt.ToString("yyyy-MM-dd")</td>
+            </tr>
+        }
+    </tbody>
+</table>
