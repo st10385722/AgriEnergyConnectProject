@@ -230,3 +230,4 @@ C:\Users\Niel\source\vsc\Agri-EnergyConnect\bin\Debug\net9.0\runtimes\win\lib\ne
 C:\Users\Niel\source\vsc\Agri-EnergyConnect\obj\Debug\net9.0\Agri-EnergyConnect.csproj.AssemblyReference.cache
 C:\Users\Niel\source\vsc\Agri-EnergyConnect\obj\Debug\net9.0\Agri-Ene.14389D07.Up2Date
 C:\Users\Niel\source\vsc\Agri-EnergyConnect\bin\Debug\net9.0\Crypto.dll
+C:\Users\Niel\source\vsc\Agri-EnergyConnect\obj\Debug\net9.0\Agri-EnergyConnect.sourcelink.json

@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Agri_EnergyConnect.Models;
 
@@ -10,13 +9,13 @@ public partial class User
 
     public string Username { get; set; } = null!;
 
-    public string PasswordHash { get; set; } = null!;
+    public string? PasswordHash { get; set; }
 
     public string Email { get; set; } = null!;
 
     public int RoleId { get; set; }
 
-    public DateOnly CreatedAt { get; set; }
+    public DateTime? CreatedAt { get; set; }
 
     public int CreatedBy { get; set; }
 
@@ -27,10 +26,4 @@ public partial class User
     public virtual ICollection<Product> Products { get; set; } = new List<Product>();
 
     public virtual UserRole Role { get; set; } = null!;
-
-    // [NotMapped]
-    // public string? Password {get; set;}
-
-    // [NotMapped]
-    // public string? ConfirmPassword {get; set;}
 }

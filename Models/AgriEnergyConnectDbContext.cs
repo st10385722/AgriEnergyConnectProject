@@ -66,14 +66,15 @@ public partial class AgriEnergyConnectDbContext : DbContext
             entity.Property(e => e.UserId)
                 .ValueGeneratedNever()
                 .HasColumnName("user_id");
-            entity.Property(e => e.CreatedAt).HasColumnName("created_at");
+            entity.Property(e => e.CreatedAt)
+                .HasColumnType("datetime")
+                .HasColumnName("created_at");
             entity.Property(e => e.CreatedBy).HasColumnName("created_by");
             entity.Property(e => e.Email)
                 .HasMaxLength(255)
                 .IsUnicode(false)
                 .HasColumnName("email");
             entity.Property(e => e.PasswordHash)
-                .HasMaxLength(30)
                 .IsUnicode(false)
                 .HasColumnName("password_hash");
             entity.Property(e => e.RoleId).HasColumnName("role_id");

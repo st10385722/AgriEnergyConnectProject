@@ -13,12 +13,25 @@ public class UserRepository : IUserRepository
         _context = context;
     }
 
+    public User GetUserWithRole(string username){
+        return _context.Users
+            .Include(u => u.RoleId)
+            .FirstOrDefault(u => u.Username == username);
+    }
+
+    public UserRole getUserRole(int roleId){
+        return _context.UserRoles.FirstOrDefault(r => r.RoleId == roleId);
+    }
     public async Task<IEnumerable<User>> GetAll(){
         return await _context.Users.ToListAsync();
     }
 
     public async Task<User> GetById(string listingId){
         return await _context.Users.FindAsync(listingId);
+    }
+
+    public bool UsernameExists(string username){
+        return _context.Users.Any(u => u.Username == username);
     }
 
     public async Task<IEnumerable<User>> GetProductsByUserId(string userId){

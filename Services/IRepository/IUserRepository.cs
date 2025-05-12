@@ -5,6 +5,9 @@ namespace Agri_EnergyConnect.Services.IRepository;
 
 public interface IUserRepository
 {
+    User GetUserWithRole(string username);
+    UserRole getUserRole(int roleId);
+    bool UsernameExists(string username);
     Task<IEnumerable<User>> GetAll();
     Task<User> GetById(string userId);
     Task<IEnumerable<User>> GetProductsByUserId(string userId);

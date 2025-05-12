@@ -3,27 +3,44 @@ using Agri_EnergyConnect.Services.IRepository;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Microsoft.AspNetCore.Identity;
+using System.Security.Claims;
+using Microsoft.AspNetCore.Authentication;
+using Agri_EnergyConnect.Services;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Agri_EnergyConnect.Controllers
 {
     public class UserAccountController : Controller
     {
         private IUserRepository _ur;
+        // private HttpContext _httpContext;
+        private IHttpContextAccessor _httpContext;
 
-        public UserAccountController(IUserRepository ur){
+        private readonly ICurrentUserService _cus;
+
+        public UserAccountController(IUserRepository ur, 
+        //HttpContext httpContext, 
+        IHttpContextAccessor httpContext,
+        ICurrentUserService cus){
             _ur = ur;
+            //_httpContext = httpContext;
+            _httpContext = httpContext;
+            _cus = cus;
         }
         // GET: UserAccountController
         public ActionResult Index()
-        {        return View();
+        {        
+            return View();
         }
         [HttpGet]
-        public ActionResult CreateFarmer(){
+        //[Authorize(Roles = "admin, employee")]
+        public ActionResult CreateUser(){
             return View();
         }
 
+        //[Authorize(Roles = "admin, employee")]
         [HttpPost]
-        public async Task<IActionResult> CreateFarmer(User user, string Password, string ConfirmPassword){
+        public async Task<ActionResult> CreateUserAction(User user, string Password, string ConfirmPassword){
             ModelState.Remove("PasswordHash");
             ModelState.Remove("RoleId");
             ModelState.Remove("CreatedAt");
@@ -33,16 +50,34 @@ namespace Agri_EnergyConnect.Controllers
             ModelState.Remove("CreatedByNavigation"); 
 
             if(ModelState.IsValid){
+                var creatorId = _cus.GetCurrentUserId();
+                //if(creatorId == 0) {return Unauthorized();}
+                var currentUserRole = _cus.GetCurrentUserRole();
                 if(!Password.Equals(ConfirmPassword)){
                     ModelState.AddModelError("Password", "Password does not match confirm password!");
                     return View(user);
                 }
                 var hasher = new PasswordHasher<object>();
-                string hashedPassword = hasher.HashPassword(null, Password);
+                string hashedPassword = hasher.HashPassword(user, Password);
                 user.PasswordHash = hashedPassword;
+                int roleToAssign;
                 //to verify
                 //var result = hasher.VerifyHashedPassword(null, hashedPassword, "input_password");
                 // Returns PasswordVerificationResult.Success or Failed
+                switch(currentUserRole){
+                    case "admin":
+                        //change for auto generating
+                        roleToAssign = 2;
+                    break;
+                    case "employee":
+                        roleToAssign = 1;
+                    break;
+                    default: roleToAssign = -1; 
+                    break;
+                }
+                user.RoleId = roleToAssign;
+                user.CreatedAt = DateTime.UtcNow;
+                user.CreatedBy = creatorId;
 
                 await _ur.Insert(user);
                 await _ur.SaveAsync();
@@ -54,29 +89,34 @@ namespace Agri_EnergyConnect.Controllers
         }
         public ActionResult Login(){
             return View();
+        }
 
+        public async Task<ActionResult> Login(string username, string password){
             //after user details verified
             // In your Login action
-// var user = _dbContext.Users
-//     .Include(u => u.UserRole)  // Join with role table
-//     .FirstOrDefault(u => u.Username == model.Username);
+            var user = _ur.GetUserWithRole(username);
+            var role = _ur.getUserRole(user.RoleId);
+            var hasher = new PasswordHasher<object>();
+            var result = hasher.VerifyHashedPassword(user, user.PasswordHash, password);
+            // Returns PasswordVerificationResult.Success or Failed
 
-// if (user != null && VerifyPassword(model.Password, user.PasswordHash))
-// {
-//     var claims = new List<Claim>
-//     {
-//         new Claim(ClaimTypes.NameIdentifier, user.UserId.ToString()),
-//         new Claim(ClaimTypes.Name, user.Username),
-//         new Claim(ClaimTypes.Role, user.UserRole.RoleName) // From joined table
-//     };
+            if (user != null && result == PasswordVerificationResult.Success)
+            {
+                var claims = new List<Claim>
+                {
+                    new Claim(ClaimTypes.NameIdentifier, user.UserId.ToString()),
+                    new Claim(ClaimTypes.Name, user.Username),
+                    new Claim(ClaimTypes.Role, role.RoleName),
+                };
 
-//     var identity = new ClaimsIdentity(claims, "CustomAuth");
-//     var principal = new ClaimsPrincipal(identity);
-    
-//     await HttpContext.SignInAsync("CustomScheme", principal);
-//     return RedirectToAction("Index", "Home");
-// }
+                var identity = new ClaimsIdentity(claims, "CustomAuthentication");
+                var principal = new ClaimsPrincipal(identity);
+                
+                await _httpContext.HttpContext.SignInAsync("CustomScheme", principal);
+                return RedirectToAction("Index", "Home");
+            }
+            //error, return page
+            return View(username, password);
         }
-        
     }
 }
