@@ -3,66 +3,60 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Agri_EnergyConnect</title>
-    <script type="importmap"></script>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/Agri_EnergyConnect.styles.css" asp-append-version="true" />
+    <title>@ViewData["Title"] - Agri Energy Connect</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 </head>
-<body>
+<body class="bg-primary text-light">
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Agri_EnergyConnect</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand text-light" asp-area="" asp-controller="Home" asp-action="Index">Agri Energy Connect</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    @if(User.Identity.IsAuthenticated)
-                    {
-                        <ul class="navbar-nav flex-grow-1">
-                            @if(User.IsInRole("employee"))
-                            {
-                                <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="UserAccount" asp-action="CreateUser">Create Farmer</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="Farmer" asp-action="FarmerIndex">Farmers</a>
-                                </li>
-                            }
-                            @if(User.IsInRole("admin")){
-                                <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="UserAccount" asp-action="CreateUser">Create Employee</a>
-                                </li>
-                            }
-                            @if(User.IsInRole("farmer"))
-                            {
-                                <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="Product" asp-action="CreateProduct">Create Product</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link text-dark" asp-area="" asp-controller="Product" asp-action="MyProducts">My Products</a>
-                                </li>
-                            }
-                        </ul>
-                    }
+                <div class="collapse navbar-collapse" id="navbarColor01">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-light" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Menu</a>
+                            <div class="dropdown-menu">
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    @if (User.IsInRole("employee"))
+                                    {
+                                        <a class="dropdown-item" asp-area="" asp-controller="UserAccount" asp-action="CreateUser">Create Farmer</a>
+                                        <a class="dropdown-item" asp-area="" asp-controller="Employee" asp-action="ViewFarmerIndex">Farmers</a>
+                                    }
+                                    @if (User.IsInRole("admin"))
+                                    {
+                                        <a class="dropdown-item" asp-area="" asp-controller="UserAccount" asp-action="CreateUser">Create Employee</a>
+                                    }
+                                    @if (User.IsInRole("farmer"))
+                                    {
+                                        <a class="dropdown-item" asp-area="" asp-controller="Product" asp-action="CreateProduct">Create Product</a>
+                                        <a class="dropdown-item" asp-area="" asp-controller="Product" asp-action="MyProducts">My Products</a>
+                                        <a class="dropdown-item" asp-area="" asp-controller="Farmer" asp-action="FillFarmerDetails">Upload details</a>
+                                    }
+                                }
+                                else
+                                {
+                                    <a class="dropdown-item" asp-area="" asp-controller="UserAccount" asp-action="Login">Login</a>
+                                }
+                            </div>
+                        </li>
+                    </ul>
                     <ul class="navbar-nav">
-                        @if(!User.Identity.IsAuthenticated)
+                        @if (User.Identity.IsAuthenticated)
                         {
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="UserAccount" asp-action="Login">Login</a>
+                                <strong class="nav-link text-light">@User.Identity.Name</strong>
                             </li>
-                        }
-                        else 
-                        {
                             <li class="nav-item">
-                                <p class="nav-link text-dark">Welcome @User.Identity.Name</p>
+                                <form asp-action="Logout" asp-controller="UserAccount" method="post" class="d-inline">
+                                    @Html.AntiForgeryToken()
+                                    <button type="submit" class="btn btn-secondary btn-sm">Logout</button>
+                                </form>
                             </li>
-                            <form asp-action="Logout" asp-controller="UserAccount" method="post">
-                                @Html.AntiForgeryToken()
-                                <button type="submit" class="nav-link text-dark">Logout</button>
-                            </form> 
                         }
                     </ul>
                 </div>
@@ -70,39 +64,13 @@
         </nav>
     </header>
     <div class="container">
-        @if (User.Identity.IsAuthenticated && User.IsInRole("farmer"))
-        {
-            // Check if the logged-in user's UserId exists in the Farmer table
-            var userId = User.FindFirst(System.Security.Claims.ClaimTypes.NameIdentifier)?.Value;
-            var farmerExists = false;
-
-            using (var scope = Context.RequestServices.CreateScope())
-            {
-                var dbContext = scope.ServiceProvider.GetRequiredService<AgriEnergyConnectDbContext>();
-                farmerExists = dbContext.Farmers.Any(f => f.UserId.ToString() == userId);
-            }
-
-            if (!farmerExists)
-            {
-                <div class="alert alert-danger" role="alert">
-                    <strong>Warning:</strong> You have not filled in your farmer details. 
-                    <a asp-area="" asp-controller="Farmer" asp-action="FillFarmerDetails" asp-route-userId="@userId" class="alert-link">Click here to fill your details</a>.
-                </div>
-            }
-        }
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
-
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2025 - Agri_EnergyConnect - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-        </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
 </body>
+    @* <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>*@
+    @await RenderSectionAsync("Scripts", required: false)
 </html>

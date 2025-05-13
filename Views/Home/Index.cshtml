@@ -1,8 +1,76 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model dynamic
+@{
+    var farmDetailsExist = TempData["FarmerDetailsAlreadyExistError"];
+    var farmDetailsNotSetup = TempData["FarmerDetailsNotSetup"];
 }
+<br />
+<br />
+<div class="text-center text-white">
+    @if (!User.Identity.IsAuthenticated)
+    {
+        <h2 class="text-white">Welcome to the Agri Energy Connect website</h2>
+        <br />
+        <h4 class="text-white">The hub for all green farming practices</h4>
+        <br />
+        <br />
+        <h6 class="text-white">No account? No problem! Email the Agri Energy Connect team at 
+            <a style="background-color: bisque;" href="mailto:accounts@agri-energy-connect.com">accounts@agri-energy-connect.com</a> to get started</h6>
+        <br />
+        <h6 class="text-white">Already have an account? Click the button below to get started</h6>
+        <a asp-controller="UserAccount" asp-action="Login" class="btn btn-primary">Login</a>
+    }
+    else
+    {
+        <h2 class="text-white">Welcome to Agri Energy Connect</h2>
+        <br />
+        <h4 class="text-white">Choose an action below to get started:</h4>
+        <br />
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+        @if (User.IsInRole("farmer"))
+        {
+            <div class="mb-4">
+                <h5 class="text-white">If you're looking to start selling, click below to add a product:</h5>
+                <a asp-controller="Product" asp-action="CreateProduct" class="btn btn-success">Add Product</a>
+            </div>
+            <div class="mb-4">
+                <h5 class="text-white">View and manage your products:</h5>
+                <a asp-controller="Product" asp-action="MyProducts" class="btn btn-info">My Products</a>
+                @if(farmDetailsNotSetup != null){
+                    <div class="alert alert-danger mt-2">
+                        @farmDetailsNotSetup
+                    </div>
+                }
+            </div>
+            <div class="mb-4">
+                <h5 class="text-white">Click here if you have not setup your details</h5>
+                <a asp-controller="Farmer" asp-action="FillFarmerDetails" class="btn btn-info">Enter Farmer details</a>
+                <br/>
+                @if(farmDetailsExist != null){
+                    <div class="alert alert-danger mt-2">
+                        @farmDetailsExist
+                    </div>
+                }
+            </div>
+        }
+
+        @if (User.IsInRole("employee"))
+        {
+            <div class="mb-4">
+                <h5 class="text-white">Here you can see all farmers:</h5>
+                <a asp-controller="Employee" asp-action="ViewFarmerIndex" class="btn btn-primary">View Farmers</a>
+            </div>
+            <div class="mb-4">
+                <h5 class="text-white">Click below to create a new farmer account:</h5>
+                <a asp-controller="UserAccount" asp-action="CreateUser" class="btn btn-success">Create Farmer</a>
+            </div>
+        }
+
+        @if (User.IsInRole("admin"))
+        {
+            <div class="mb-4">
+                <h5 class="text-white">Click below to create a new employee account:</h5>
+                <a asp-controller="UserAccount" asp-action="CreateUser" class="btn btn-warning">Create Employee</a>
+            </div>
+        }
+    }
 </div>

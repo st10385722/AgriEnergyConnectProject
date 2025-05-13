@@ -7,9 +7,9 @@ namespace Agri_EnergyConnect.Services.Repository;
 
 public class UserRepository : IUserRepository
 {
-    private readonly AgriEnergyConnectDbContext _context;
+    private readonly St10385722AgriEnergyConnectDbContext _context;
 
-    public UserRepository(AgriEnergyConnectDbContext context){
+    public UserRepository(St10385722AgriEnergyConnectDbContext context){
         _context = context;
     }
 

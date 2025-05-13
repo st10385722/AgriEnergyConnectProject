@@ -7,9 +7,9 @@ namespace Agri_EnergyConnect.Services.Repository;
 
 public class FarmerRepository:IFarmerRepository
 {
-    private readonly AgriEnergyConnectDbContext _context;
+    private readonly St10385722AgriEnergyConnectDbContext _context;
 
-    public FarmerRepository(AgriEnergyConnectDbContext context){
+    public FarmerRepository(St10385722AgriEnergyConnectDbContext context){
         _context = context;
     }
     public async Task<IEnumerable<Farmer>> GetAll(){

@@ -10,7 +10,11 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddDbContext<AgriEnergyConnectDbContext>();
+//not secure, but 
+//added for ease of use instead of using env variables
+builder.Services.AddDbContext<St10385722AgriEnergyConnectDbContext>(options =>{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+});
 
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IFarmerRepository, FarmerRepository>();
@@ -22,7 +26,7 @@ builder.Services.AddScoped<ICurrentUserService, CurrentUserService>();
 //adding authentication
 builder.Services.AddAuthentication("CustomAuthentication")
     .AddCookie("CustomAuthentication", options => {
-        options.ExpireTimeSpan = new TimeSpan(0,30,0);
+        options.ExpireTimeSpan = new TimeSpan(1,0,0);
         options.LoginPath = "/UserAccount/Login";
         options.AccessDeniedPath = "/UserAccount/AccessDenied";
     }
@@ -64,7 +68,7 @@ app.MapControllerRoute(
 //setting up db things for auto generation
 using (var scope = app.Services.CreateScope())
 {
-    var dbContext = scope.ServiceProvider.GetRequiredService<AgriEnergyConnectDbContext>();
+    var dbContext = scope.ServiceProvider.GetRequiredService<St10385722AgriEnergyConnectDbContext>();
     var hasher = new PasswordHasher<object>();
 
     // Ensure the database is created

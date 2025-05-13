@@ -1,0 +1,39 @@
+﻿@model IEnumerable<(Agri_EnergyConnect.Models.Farmer Farmer, string Username)>
+<br/>
+<br/>
+<div class="container text-center">
+    <h1 class="text-white">Farmer</h1>
+    <br/>
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">@item.Username</h5>
+                        <br/>
+                        <p class="card-text">
+                            <strong>Farm name:</strong> @item.Farmer.FarmName
+                        </p>
+                        <p class="card-text">
+                            <strong>Type of farm:</strong> @item.Farmer.FarmType
+                        </p>
+                        <p class="card-text">
+                            <strong>Havesting date:</strong> @item.Farmer.HavestingDate.ToString("yyyy-MM-dd")
+                        </p>
+                        <p class="card-text">
+                            <a class="btn btn-primary" asp-route-farmerId="@item.Farmer.FarmerId" asp-route-username="@item.Username" asp-controller="Farmer" asp-action="ViewFarmerDetails">
+                                View Details
+                            </a>
+                        </p>
+                        <p class="card-text">
+                            <a class="btn btn-secondary" asp-route-farmerId="@item.Farmer.FarmerId" asp-controller="Employee" asp-action="ViewFarmerProducts">
+                                View Products
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

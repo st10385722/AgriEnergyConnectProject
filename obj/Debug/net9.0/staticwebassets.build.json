@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "oOyddehmRF/UoYtrdXE5XhDaeCD+EhmB9wyAs3Ux2Ro=",
+  "Hash": "2srnaJMGtKtY8fFVB1TvpWUZsAWx7NcKYQmulM2S3ds=",
   "Source": "Agri-EnergyConnect",
   "BasePath": "_content/Agri-EnergyConnect",
   "Mode": "Default",
@@ -458,12 +458,12 @@
       "OriginalItemSpec": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Identity": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\obj\\Debug\\net9.0\\compressed\\e3adra7pvw-46ein0sx1k.gz",
+      "Identity": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\obj\\Debug\\net9.0\\compressed\\e3adra7pvw-wj0xf2bef7.gz",
       "SourceId": "Agri-EnergyConnect",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Agri-EnergyConnect",
-      "RelativePath": "lib/bootstrap/dist/css/bootstrap.min#[.{fingerprint=46ein0sx1k}]?.css.gz",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap.min#[.{fingerprint=wj0xf2bef7}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -472,8 +472,8 @@
       "RelatedAsset": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "9buzyrzsnb",
-      "Integrity": "NWIxwejcHtJ5yvljTypwFQBimL4GY/TpmkwWCoiPk+o=",
+      "Fingerprint": "f1omo76qgm",
+      "Integrity": "zWh55w+ZbK2vAr3YP/x79qpdqyDM6H/aBQ0rTfQwnAQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
@@ -519,6 +519,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Identity": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\obj\\Debug\\net9.0\\compressed\\ex1c98g0od-6sx6pifph3.gz",
+      "SourceId": "Agri-EnergyConnect",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\obj\\Debug\\net9.0\\compressed\\",
+      "BasePath": "_content/Agri-EnergyConnect",
+      "RelativePath": "site#[.{fingerprint=6sx6pifph3}]?.webmanifest.gz",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Alternative",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\site.webmanifest",
+      "AssetTraitName": "Content-Encoding",
+      "AssetTraitValue": "gzip",
+      "Fingerprint": "b6u6937qo1",
+      "Integrity": "Q2NjZtu2MEFdHrSh8eCs0J1KHeDmJmajTADXVbMihIw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\site.webmanifest"
     },
     {
       "Identity": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\obj\\Debug\\net9.0\\compressed\\f5uttz52ap-87fc7y1x7t.gz",
@@ -647,12 +668,12 @@
       "OriginalItemSpec": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\obj\\Debug\\net9.0\\compressed\\gynvmgv3al-61n19gt1b8.gz",
+      "Identity": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\obj\\Debug\\net9.0\\compressed\\gynvmgv3al-ho8pueqyxr.gz",
       "SourceId": "Agri-EnergyConnect",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Agri-EnergyConnect",
-      "RelativePath": "favicon#[.{fingerprint=61n19gt1b8}]?.ico.gz",
+      "RelativePath": "favicon#[.{fingerprint=ho8pueqyxr}]?.ico.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -661,8 +682,8 @@
       "RelatedAsset": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\favicon.ico",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "nezsohjtde",
-      "Integrity": "wfFuuYm+Lh6RbCeeiUqxw334b/hIOkp5j9eokGUM1Y0=",
+      "Fingerprint": "um95rdkkrg",
+      "Integrity": "Bk/ngwg49YwBYHBiNn8dDOfzqXGChPZJfqD69gTxlGI=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\favicon.ico"
@@ -1067,12 +1088,12 @@
       "OriginalItemSpec": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Identity": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\obj\\Debug\\net9.0\\compressed\\srtxekrlyx-s35ty4nyc5.gz",
+      "Identity": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\obj\\Debug\\net9.0\\compressed\\srtxekrlyx-6rp9vp0j4j.gz",
       "SourceId": "Agri-EnergyConnect",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\obj\\Debug\\net9.0\\compressed\\",
       "BasePath": "_content/Agri-EnergyConnect",
-      "RelativePath": "lib/bootstrap/dist/css/bootstrap#[.{fingerprint=s35ty4nyc5}]?.css.gz",
+      "RelativePath": "lib/bootstrap/dist/css/bootstrap#[.{fingerprint=6rp9vp0j4j}]?.css.gz",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Alternative",
@@ -1081,8 +1102,8 @@
       "RelatedAsset": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "AssetTraitName": "Content-Encoding",
       "AssetTraitValue": "gzip",
-      "Fingerprint": "jw1qs72mo9",
-      "Integrity": "I0QuKxdK89NxyamT6EeIfl/MyifdDw+D8cUjkiXwoOU=",
+      "Fingerprint": "fbcotpajcm",
+      "Integrity": "W/UrDkgNty9LT5TmjV26R+L9PNwFEQmnuy9tFhNxsV0=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
@@ -1403,6 +1424,111 @@
       "OriginalItemSpec": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\Agri-EnergyConnect.bundle.scp.css"
     },
     {
+      "Identity": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\android-chrome-192x192.png",
+      "SourceId": "Agri-EnergyConnect",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\",
+      "BasePath": "_content/Agri-EnergyConnect",
+      "RelativePath": "android-chrome-192x192#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "thqzj6xweg",
+      "Integrity": "H7SorPUs2ju4TECsO5KV0JfmH7S+KDymjSkFlKswU+Y=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\android-chrome-192x192.png"
+    },
+    {
+      "Identity": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\android-chrome-512x512.png",
+      "SourceId": "Agri-EnergyConnect",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\",
+      "BasePath": "_content/Agri-EnergyConnect",
+      "RelativePath": "android-chrome-512x512#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "d3k61qpkfe",
+      "Integrity": "x3uQDBy/whfiq5YiPyHxSsO4n6rhTV2sHQCOH9XR2zM=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\android-chrome-512x512.png"
+    },
+    {
+      "Identity": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\apple-touch-icon.png",
+      "SourceId": "Agri-EnergyConnect",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\",
+      "BasePath": "_content/Agri-EnergyConnect",
+      "RelativePath": "apple-touch-icon#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "2gjgmfi7gk",
+      "Integrity": "jue9szk/1g/i8Bc6Z34X5OM4+Tz0QbOpPX/2HDgvPxs=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\apple-touch-icon.png"
+    },
+    {
+      "Identity": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\content\\tree_background_new.jpg",
+      "SourceId": "Agri-EnergyConnect",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\",
+      "BasePath": "_content/Agri-EnergyConnect",
+      "RelativePath": "content/tree_background_new#[.{fingerprint}]?.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "r5qd89uaba",
+      "Integrity": "r/FbQVW43GFRwCXfEUK+K5+A2HoHTXq3D6DrszKiKsw=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\content\\tree_background_new.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\content\\tree_background.png",
+      "SourceId": "Agri-EnergyConnect",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\",
+      "BasePath": "_content/Agri-EnergyConnect",
+      "RelativePath": "content/tree_background#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "3wl3gsqz37",
+      "Integrity": "bQ7AzTrUqeTICJ+EastBgHIcOqAcJeB2W5nghWZw1e4=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\content\\tree_background.png"
+    },
+    {
       "Identity": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\css\\site.css",
       "SourceId": "Agri-EnergyConnect",
       "SourceType": "Discovered",
@@ -1424,6 +1550,48 @@
       "OriginalItemSpec": "wwwroot\\css\\site.css"
     },
     {
+      "Identity": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\favicon-16x16.png",
+      "SourceId": "Agri-EnergyConnect",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\",
+      "BasePath": "_content/Agri-EnergyConnect",
+      "RelativePath": "favicon-16x16#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "csm27j68sb",
+      "Integrity": "JC1M6QRKdEfYCnCsT0TVrn89HkhNGted27CjI/eIl8s=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\favicon-16x16.png"
+    },
+    {
+      "Identity": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\favicon-32x32.png",
+      "SourceId": "Agri-EnergyConnect",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\",
+      "BasePath": "_content/Agri-EnergyConnect",
+      "RelativePath": "favicon-32x32#[.{fingerprint}]?.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "39lafzw2na",
+      "Integrity": "6RomPWtvJeT5bblhsk1THVNTcPO2yyfz2hmOrjFgYdo=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\favicon-32x32.png"
+    },
+    {
       "Identity": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\favicon.ico",
       "SourceId": "Agri-EnergyConnect",
       "SourceType": "Discovered",
@@ -1438,8 +1606,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "61n19gt1b8",
-      "Integrity": "Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM=",
+      "Fingerprint": "ho8pueqyxr",
+      "Integrity": "Me4w20Jrqp4wJzyk3WRpi4UpZJdSadoEMMBfawbFjGk=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
@@ -1984,8 +2152,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "s35ty4nyc5",
-      "Integrity": "GKEF18s44B5e0MolXAkpkqLiEbOVlKf6VyYr/G/E6pw=",
+      "Fingerprint": "6rp9vp0j4j",
+      "Integrity": "XtIVhc1F3d6S6VDHShXnRYM/VqLRNUTWx2UxkxzEfGQ=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css"
@@ -2026,8 +2194,8 @@
       "RelatedAsset": "",
       "AssetTraitName": "",
       "AssetTraitValue": "",
-      "Fingerprint": "46ein0sx1k",
-      "Integrity": "PI8n5gCcz9cQqQXm3PEtDuPG8qx9oFsFctPg0S5zb8g=",
+      "Fingerprint": "wj0xf2bef7",
+      "Integrity": "9Jd6TqaOdSHdhTaCGUmFl8c4aUeKalHi40wqPf0xH94=",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
@@ -2724,6 +2892,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Identity": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\site.webmanifest",
+      "SourceId": "Agri-EnergyConnect",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\",
+      "BasePath": "_content/Agri-EnergyConnect",
+      "RelativePath": "site#[.{fingerprint}]?.webmanifest",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "6sx6pifph3",
+      "Integrity": "ep4Hzh9zhmiZF2At3Fp1dQrYQuYF/3ZPZxc1KcGBvwQ=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\site.webmanifest"
     }
   ],
   "Endpoints": [
@@ -3324,6 +3513,416 @@
       ]
     },
     {
+      "Route": "android-chrome-192x192.png",
+      "AssetFile": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\android-chrome-192x192.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8514"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"H7SorPUs2ju4TECsO5KV0JfmH7S+KDymjSkFlKswU+Y=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 13 May 2025 19:12:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-H7SorPUs2ju4TECsO5KV0JfmH7S+KDymjSkFlKswU+Y="
+        }
+      ]
+    },
+    {
+      "Route": "android-chrome-192x192.thqzj6xweg.png",
+      "AssetFile": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\android-chrome-192x192.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8514"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"H7SorPUs2ju4TECsO5KV0JfmH7S+KDymjSkFlKswU+Y=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 13 May 2025 19:12:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "thqzj6xweg"
+        },
+        {
+          "Name": "label",
+          "Value": "android-chrome-192x192.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-H7SorPUs2ju4TECsO5KV0JfmH7S+KDymjSkFlKswU+Y="
+        }
+      ]
+    },
+    {
+      "Route": "android-chrome-512x512.d3k61qpkfe.png",
+      "AssetFile": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\android-chrome-512x512.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "24270"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"x3uQDBy/whfiq5YiPyHxSsO4n6rhTV2sHQCOH9XR2zM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 13 May 2025 19:12:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "d3k61qpkfe"
+        },
+        {
+          "Name": "label",
+          "Value": "android-chrome-512x512.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-x3uQDBy/whfiq5YiPyHxSsO4n6rhTV2sHQCOH9XR2zM="
+        }
+      ]
+    },
+    {
+      "Route": "android-chrome-512x512.png",
+      "AssetFile": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\android-chrome-512x512.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "24270"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"x3uQDBy/whfiq5YiPyHxSsO4n6rhTV2sHQCOH9XR2zM=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 13 May 2025 19:12:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-x3uQDBy/whfiq5YiPyHxSsO4n6rhTV2sHQCOH9XR2zM="
+        }
+      ]
+    },
+    {
+      "Route": "apple-touch-icon.2gjgmfi7gk.png",
+      "AssetFile": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\apple-touch-icon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7764"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jue9szk/1g/i8Bc6Z34X5OM4+Tz0QbOpPX/2HDgvPxs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 13 May 2025 19:12:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "2gjgmfi7gk"
+        },
+        {
+          "Name": "label",
+          "Value": "apple-touch-icon.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-jue9szk/1g/i8Bc6Z34X5OM4+Tz0QbOpPX/2HDgvPxs="
+        }
+      ]
+    },
+    {
+      "Route": "apple-touch-icon.png",
+      "AssetFile": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\apple-touch-icon.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7764"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"jue9szk/1g/i8Bc6Z34X5OM4+Tz0QbOpPX/2HDgvPxs=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 13 May 2025 19:12:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-jue9szk/1g/i8Bc6Z34X5OM4+Tz0QbOpPX/2HDgvPxs="
+        }
+      ]
+    },
+    {
+      "Route": "content/tree_background_new.jpg",
+      "AssetFile": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\content\\tree_background_new.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "791436"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"r/FbQVW43GFRwCXfEUK+K5+A2HoHTXq3D6DrszKiKsw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 13 May 2025 20:05:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-r/FbQVW43GFRwCXfEUK+K5+A2HoHTXq3D6DrszKiKsw="
+        }
+      ]
+    },
+    {
+      "Route": "content/tree_background_new.r5qd89uaba.jpg",
+      "AssetFile": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\content\\tree_background_new.jpg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "791436"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"r/FbQVW43GFRwCXfEUK+K5+A2HoHTXq3D6DrszKiKsw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 13 May 2025 20:05:36 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "r5qd89uaba"
+        },
+        {
+          "Name": "label",
+          "Value": "content/tree_background_new.jpg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-r/FbQVW43GFRwCXfEUK+K5+A2HoHTXq3D6DrszKiKsw="
+        }
+      ]
+    },
+    {
+      "Route": "content/tree_background.3wl3gsqz37.png",
+      "AssetFile": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\content\\tree_background.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "165529"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bQ7AzTrUqeTICJ+EastBgHIcOqAcJeB2W5nghWZw1e4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 13 May 2025 19:16:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "3wl3gsqz37"
+        },
+        {
+          "Name": "label",
+          "Value": "content/tree_background.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-bQ7AzTrUqeTICJ+EastBgHIcOqAcJeB2W5nghWZw1e4="
+        }
+      ]
+    },
+    {
+      "Route": "content/tree_background.png",
+      "AssetFile": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\content\\tree_background.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "165529"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"bQ7AzTrUqeTICJ+EastBgHIcOqAcJeB2W5nghWZw1e4=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 13 May 2025 19:16:31 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-bQ7AzTrUqeTICJ+EastBgHIcOqAcJeB2W5nghWZw1e4="
+        }
+      ]
+    },
+    {
       "Route": "css/site.b9sayid5wm.css",
       "AssetFile": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\obj\\Debug\\net9.0\\compressed\\fkshb06w33-b9sayid5wm.gz",
       "Selectors": [
@@ -3622,71 +4221,8 @@
       ]
     },
     {
-      "Route": "favicon.61n19gt1b8.ico",
-      "AssetFile": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\obj\\Debug\\net9.0\\compressed\\gynvmgv3al-61n19gt1b8.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000405022276"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2468"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"wfFuuYm+Lh6RbCeeiUqxw334b/hIOkp5j9eokGUM1Y0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 04 May 2025 14:08:56 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/x-icon"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "61n19gt1b8"
-        },
-        {
-          "Name": "label",
-          "Value": "favicon.ico"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="
-        }
-      ]
-    },
-    {
-      "Route": "favicon.61n19gt1b8.ico",
-      "AssetFile": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\favicon.ico",
+      "Route": "favicon-16x16.csm27j68sb.png",
+      "AssetFile": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\favicon-16x16.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3695,19 +4231,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "5430"
+          "Value": "468"
         },
         {
           "Name": "Content-Type",
-          "Value": "image/x-icon"
+          "Value": "image/png"
         },
         {
           "Name": "ETag",
-          "Value": "\"Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM=\""
+          "Value": "\"JC1M6QRKdEfYCnCsT0TVrn89HkhNGted27CjI/eIl8s=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 04 May 2025 14:08:56 GMT"
+          "Value": "Tue, 13 May 2025 19:12:26 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3717,21 +4253,21 @@
       "EndpointProperties": [
         {
           "Name": "fingerprint",
-          "Value": "61n19gt1b8"
+          "Value": "csm27j68sb"
         },
         {
           "Name": "label",
-          "Value": "favicon.ico"
+          "Value": "favicon-16x16.png"
         },
         {
           "Name": "integrity",
-          "Value": "sha256-Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="
+          "Value": "sha256-JC1M6QRKdEfYCnCsT0TVrn89HkhNGted27CjI/eIl8s="
         }
       ]
     },
     {
-      "Route": "favicon.61n19gt1b8.ico.gz",
-      "AssetFile": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\obj\\Debug\\net9.0\\compressed\\gynvmgv3al-61n19gt1b8.gz",
+      "Route": "favicon-16x16.png",
+      "AssetFile": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\favicon-16x16.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3740,127 +4276,19 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2468"
+          "Value": "468"
         },
         {
           "Name": "Content-Type",
-          "Value": "image/x-icon"
+          "Value": "image/png"
         },
         {
           "Name": "ETag",
-          "Value": "\"wfFuuYm+Lh6RbCeeiUqxw334b/hIOkp5j9eokGUM1Y0=\""
+          "Value": "\"JC1M6QRKdEfYCnCsT0TVrn89HkhNGted27CjI/eIl8s=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 04 May 2025 14:08:56 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "61n19gt1b8"
-        },
-        {
-          "Name": "label",
-          "Value": "favicon.ico.gz"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-wfFuuYm+Lh6RbCeeiUqxw334b/hIOkp5j9eokGUM1Y0="
-        }
-      ]
-    },
-    {
-      "Route": "favicon.ico",
-      "AssetFile": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\obj\\Debug\\net9.0\\compressed\\gynvmgv3al-61n19gt1b8.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000405022276"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "2468"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"wfFuuYm+Lh6RbCeeiUqxw334b/hIOkp5j9eokGUM1Y0=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 04 May 2025 14:08:56 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "no-cache"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/x-icon"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "integrity",
-          "Value": "sha256-Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="
-        }
-      ]
-    },
-    {
-      "Route": "favicon.ico",
-      "AssetFile": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\favicon.ico",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "5430"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "image/x-icon"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 04 May 2025 14:08:56 GMT"
+          "Value": "Tue, 13 May 2025 19:12:26 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3870,13 +4298,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-Jtxf9L+5ITKRc1gIRl4VbUpGkRNfOBXjYTdhJD4facM="
+          "Value": "sha256-JC1M6QRKdEfYCnCsT0TVrn89HkhNGted27CjI/eIl8s="
         }
       ]
     },
     {
-      "Route": "favicon.ico.gz",
-      "AssetFile": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\obj\\Debug\\net9.0\\compressed\\gynvmgv3al-61n19gt1b8.gz",
+      "Route": "favicon-32x32.39lafzw2na.png",
+      "AssetFile": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\favicon-32x32.png",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -3885,7 +4313,115 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "2468"
+          "Value": "1053"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6RomPWtvJeT5bblhsk1THVNTcPO2yyfz2hmOrjFgYdo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 13 May 2025 19:12:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "39lafzw2na"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon-32x32.png"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-6RomPWtvJeT5bblhsk1THVNTcPO2yyfz2hmOrjFgYdo="
+        }
+      ]
+    },
+    {
+      "Route": "favicon-32x32.png",
+      "AssetFile": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\favicon-32x32.png",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "1053"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/png"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"6RomPWtvJeT5bblhsk1THVNTcPO2yyfz2hmOrjFgYdo=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 13 May 2025 19:12:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-6RomPWtvJeT5bblhsk1THVNTcPO2yyfz2hmOrjFgYdo="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.ho8pueqyxr.ico",
+      "AssetFile": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\obj\\Debug\\net9.0\\compressed\\gynvmgv3al-ho8pueqyxr.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000443852641"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2252"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Bk/ngwg49YwBYHBiNn8dDOfzqXGChPZJfqD69gTxlGI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 13 May 2025 19:12:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
         },
         {
           "Name": "Content-Type",
@@ -3893,11 +4429,238 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"wfFuuYm+Lh6RbCeeiUqxw334b/hIOkp5j9eokGUM1Y0=\""
+          "Value": "W/\"Me4w20Jrqp4wJzyk3WRpi4UpZJdSadoEMMBfawbFjGk=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ho8pueqyxr"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon.ico"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Me4w20Jrqp4wJzyk3WRpi4UpZJdSadoEMMBfawbFjGk="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.ho8pueqyxr.ico",
+      "AssetFile": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\favicon.ico",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "15406"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Me4w20Jrqp4wJzyk3WRpi4UpZJdSadoEMMBfawbFjGk=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 04 May 2025 14:08:56 GMT"
+          "Value": "Tue, 13 May 2025 19:12:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ho8pueqyxr"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon.ico"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Me4w20Jrqp4wJzyk3WRpi4UpZJdSadoEMMBfawbFjGk="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.ho8pueqyxr.ico.gz",
+      "AssetFile": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\obj\\Debug\\net9.0\\compressed\\gynvmgv3al-ho8pueqyxr.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2252"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Bk/ngwg49YwBYHBiNn8dDOfzqXGChPZJfqD69gTxlGI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 13 May 2025 19:12:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ho8pueqyxr"
+        },
+        {
+          "Name": "label",
+          "Value": "favicon.ico.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Bk/ngwg49YwBYHBiNn8dDOfzqXGChPZJfqD69gTxlGI="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.ico",
+      "AssetFile": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\obj\\Debug\\net9.0\\compressed\\gynvmgv3al-ho8pueqyxr.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000443852641"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2252"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Bk/ngwg49YwBYHBiNn8dDOfzqXGChPZJfqD69gTxlGI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 13 May 2025 19:12:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"Me4w20Jrqp4wJzyk3WRpi4UpZJdSadoEMMBfawbFjGk=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Me4w20Jrqp4wJzyk3WRpi4UpZJdSadoEMMBfawbFjGk="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.ico",
+      "AssetFile": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\favicon.ico",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "15406"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Me4w20Jrqp4wJzyk3WRpi4UpZJdSadoEMMBfawbFjGk=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 13 May 2025 19:12:26 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Me4w20Jrqp4wJzyk3WRpi4UpZJdSadoEMMBfawbFjGk="
+        }
+      ]
+    },
+    {
+      "Route": "favicon.ico.gz",
+      "AssetFile": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\obj\\Debug\\net9.0\\compressed\\gynvmgv3al-ho8pueqyxr.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "2252"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/x-icon"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Bk/ngwg49YwBYHBiNn8dDOfzqXGChPZJfqD69gTxlGI=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 13 May 2025 19:12:26 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -3915,7 +4678,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-wfFuuYm+Lh6RbCeeiUqxw334b/hIOkp5j9eokGUM1Y0="
+          "Value": "sha256-Bk/ngwg49YwBYHBiNn8dDOfzqXGChPZJfqD69gTxlGI="
         }
       ]
     },
@@ -11370,13 +12133,13 @@
       ]
     },
     {
-      "Route": "lib/bootstrap/dist/css/bootstrap.css",
-      "AssetFile": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\obj\\Debug\\net9.0\\compressed\\srtxekrlyx-s35ty4nyc5.gz",
+      "Route": "lib/bootstrap/dist/css/bootstrap.6rp9vp0j4j.css",
+      "AssetFile": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\obj\\Debug\\net9.0\\compressed\\srtxekrlyx-6rp9vp0j4j.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000030073379"
+          "Quality": "0.000029219261"
         }
       ],
       "ResponseHeaders": [
@@ -11386,15 +12149,176 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "33251"
+          "Value": "34223"
         },
         {
           "Name": "ETag",
-          "Value": "\"I0QuKxdK89NxyamT6EeIfl/MyifdDw+D8cUjkiXwoOU=\""
+          "Value": "\"W/UrDkgNty9LT5TmjV26R+L9PNwFEQmnuy9tFhNxsV0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 04 May 2025 14:08:55 GMT"
+          "Value": "Tue, 13 May 2025 20:09:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"XtIVhc1F3d6S6VDHShXnRYM/VqLRNUTWx2UxkxzEfGQ=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6rp9vp0j4j"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/bootstrap/dist/css/bootstrap.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-XtIVhc1F3d6S6VDHShXnRYM/VqLRNUTWx2UxkxzEfGQ="
+        }
+      ]
+    },
+    {
+      "Route": "lib/bootstrap/dist/css/bootstrap.6rp9vp0j4j.css",
+      "AssetFile": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "283339"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"XtIVhc1F3d6S6VDHShXnRYM/VqLRNUTWx2UxkxzEfGQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 13 May 2025 20:09:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6rp9vp0j4j"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/bootstrap/dist/css/bootstrap.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-XtIVhc1F3d6S6VDHShXnRYM/VqLRNUTWx2UxkxzEfGQ="
+        }
+      ]
+    },
+    {
+      "Route": "lib/bootstrap/dist/css/bootstrap.6rp9vp0j4j.css.gz",
+      "AssetFile": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\obj\\Debug\\net9.0\\compressed\\srtxekrlyx-6rp9vp0j4j.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "34223"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"W/UrDkgNty9LT5TmjV26R+L9PNwFEQmnuy9tFhNxsV0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 13 May 2025 20:09:41 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6rp9vp0j4j"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/bootstrap/dist/css/bootstrap.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-W/UrDkgNty9LT5TmjV26R+L9PNwFEQmnuy9tFhNxsV0="
+        }
+      ]
+    },
+    {
+      "Route": "lib/bootstrap/dist/css/bootstrap.css",
+      "AssetFile": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\obj\\Debug\\net9.0\\compressed\\srtxekrlyx-6rp9vp0j4j.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000029219261"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "34223"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"W/UrDkgNty9LT5TmjV26R+L9PNwFEQmnuy9tFhNxsV0=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 13 May 2025 20:09:41 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11414,13 +12338,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"GKEF18s44B5e0MolXAkpkqLiEbOVlKf6VyYr/G/E6pw=\""
+          "Value": "W/\"XtIVhc1F3d6S6VDHShXnRYM/VqLRNUTWx2UxkxzEfGQ=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-GKEF18s44B5e0MolXAkpkqLiEbOVlKf6VyYr/G/E6pw="
+          "Value": "sha256-XtIVhc1F3d6S6VDHShXnRYM/VqLRNUTWx2UxkxzEfGQ="
         }
       ]
     },
@@ -11435,7 +12359,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "281046"
+          "Value": "283339"
         },
         {
           "Name": "Content-Type",
@@ -11443,11 +12367,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"GKEF18s44B5e0MolXAkpkqLiEbOVlKf6VyYr/G/E6pw=\""
+          "Value": "\"XtIVhc1F3d6S6VDHShXnRYM/VqLRNUTWx2UxkxzEfGQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 04 May 2025 14:08:55 GMT"
+          "Value": "Tue, 13 May 2025 20:09:41 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11457,13 +12381,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-GKEF18s44B5e0MolXAkpkqLiEbOVlKf6VyYr/G/E6pw="
+          "Value": "sha256-XtIVhc1F3d6S6VDHShXnRYM/VqLRNUTWx2UxkxzEfGQ="
         }
       ]
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.css.gz",
-      "AssetFile": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\obj\\Debug\\net9.0\\compressed\\srtxekrlyx-s35ty4nyc5.gz",
+      "AssetFile": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\obj\\Debug\\net9.0\\compressed\\srtxekrlyx-6rp9vp0j4j.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -11472,7 +12396,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "33251"
+          "Value": "34223"
         },
         {
           "Name": "Content-Type",
@@ -11480,11 +12404,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"I0QuKxdK89NxyamT6EeIfl/MyifdDw+D8cUjkiXwoOU=\""
+          "Value": "\"W/UrDkgNty9LT5TmjV26R+L9PNwFEQmnuy9tFhNxsV0=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 04 May 2025 14:08:55 GMT"
+          "Value": "Tue, 13 May 2025 20:09:41 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -11502,7 +12426,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-I0QuKxdK89NxyamT6EeIfl/MyifdDw+D8cUjkiXwoOU="
+          "Value": "sha256-W/UrDkgNty9LT5TmjV26R+L9PNwFEQmnuy9tFhNxsV0="
         }
       ]
     },
@@ -11805,174 +12729,13 @@
       ]
     },
     {
-      "Route": "lib/bootstrap/dist/css/bootstrap.min.46ein0sx1k.css",
-      "AssetFile": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\obj\\Debug\\net9.0\\compressed\\e3adra7pvw-46ein0sx1k.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000032295569"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "30963"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"NWIxwejcHtJ5yvljTypwFQBimL4GY/TpmkwWCoiPk+o=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 04 May 2025 14:08:55 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"PI8n5gCcz9cQqQXm3PEtDuPG8qx9oFsFctPg0S5zb8g=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "46ein0sx1k"
-        },
-        {
-          "Name": "label",
-          "Value": "lib/bootstrap/dist/css/bootstrap.min.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-PI8n5gCcz9cQqQXm3PEtDuPG8qx9oFsFctPg0S5zb8g="
-        }
-      ]
-    },
-    {
-      "Route": "lib/bootstrap/dist/css/bootstrap.min.46ein0sx1k.css",
-      "AssetFile": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "232803"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"PI8n5gCcz9cQqQXm3PEtDuPG8qx9oFsFctPg0S5zb8g=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 04 May 2025 14:08:55 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "46ein0sx1k"
-        },
-        {
-          "Name": "label",
-          "Value": "lib/bootstrap/dist/css/bootstrap.min.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-PI8n5gCcz9cQqQXm3PEtDuPG8qx9oFsFctPg0S5zb8g="
-        }
-      ]
-    },
-    {
-      "Route": "lib/bootstrap/dist/css/bootstrap.min.46ein0sx1k.css.gz",
-      "AssetFile": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\obj\\Debug\\net9.0\\compressed\\e3adra7pvw-46ein0sx1k.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "30963"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"NWIxwejcHtJ5yvljTypwFQBimL4GY/TpmkwWCoiPk+o=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 04 May 2025 14:08:55 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "46ein0sx1k"
-        },
-        {
-          "Name": "label",
-          "Value": "lib/bootstrap/dist/css/bootstrap.min.css.gz"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-NWIxwejcHtJ5yvljTypwFQBimL4GY/TpmkwWCoiPk+o="
-        }
-      ]
-    },
-    {
       "Route": "lib/bootstrap/dist/css/bootstrap.min.css",
-      "AssetFile": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\obj\\Debug\\net9.0\\compressed\\e3adra7pvw-46ein0sx1k.gz",
+      "AssetFile": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\obj\\Debug\\net9.0\\compressed\\e3adra7pvw-wj0xf2bef7.gz",
       "Selectors": [
         {
           "Name": "Content-Encoding",
           "Value": "gzip",
-          "Quality": "0.000032295569"
+          "Quality": "0.000031567649"
         }
       ],
       "ResponseHeaders": [
@@ -11982,15 +12745,15 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "30963"
+          "Value": "31677"
         },
         {
           "Name": "ETag",
-          "Value": "\"NWIxwejcHtJ5yvljTypwFQBimL4GY/TpmkwWCoiPk+o=\""
+          "Value": "\"zWh55w+ZbK2vAr3YP/x79qpdqyDM6H/aBQ0rTfQwnAQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 04 May 2025 14:08:55 GMT"
+          "Value": "Tue, 13 May 2025 14:28:13 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -12010,13 +12773,13 @@
         },
         {
           "Name": "ETag",
-          "Value": "W/\"PI8n5gCcz9cQqQXm3PEtDuPG8qx9oFsFctPg0S5zb8g=\""
+          "Value": "W/\"9Jd6TqaOdSHdhTaCGUmFl8c4aUeKalHi40wqPf0xH94=\""
         }
       ],
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-PI8n5gCcz9cQqQXm3PEtDuPG8qx9oFsFctPg0S5zb8g="
+          "Value": "sha256-9Jd6TqaOdSHdhTaCGUmFl8c4aUeKalHi40wqPf0xH94="
         }
       ]
     },
@@ -12031,7 +12794,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "232803"
+          "Value": "234498"
         },
         {
           "Name": "Content-Type",
@@ -12039,11 +12802,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"PI8n5gCcz9cQqQXm3PEtDuPG8qx9oFsFctPg0S5zb8g=\""
+          "Value": "\"9Jd6TqaOdSHdhTaCGUmFl8c4aUeKalHi40wqPf0xH94=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 04 May 2025 14:08:55 GMT"
+          "Value": "Tue, 13 May 2025 14:28:13 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -12053,13 +12816,13 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-PI8n5gCcz9cQqQXm3PEtDuPG8qx9oFsFctPg0S5zb8g="
+          "Value": "sha256-9Jd6TqaOdSHdhTaCGUmFl8c4aUeKalHi40wqPf0xH94="
         }
       ]
     },
     {
       "Route": "lib/bootstrap/dist/css/bootstrap.min.css.gz",
-      "AssetFile": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\obj\\Debug\\net9.0\\compressed\\e3adra7pvw-46ein0sx1k.gz",
+      "AssetFile": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\obj\\Debug\\net9.0\\compressed\\e3adra7pvw-wj0xf2bef7.gz",
       "Selectors": [],
       "ResponseHeaders": [
         {
@@ -12068,7 +12831,7 @@
         },
         {
           "Name": "Content-Length",
-          "Value": "30963"
+          "Value": "31677"
         },
         {
           "Name": "Content-Type",
@@ -12076,11 +12839,11 @@
         },
         {
           "Name": "ETag",
-          "Value": "\"NWIxwejcHtJ5yvljTypwFQBimL4GY/TpmkwWCoiPk+o=\""
+          "Value": "\"zWh55w+ZbK2vAr3YP/x79qpdqyDM6H/aBQ0rTfQwnAQ=\""
         },
         {
           "Name": "Last-Modified",
-          "Value": "Sun, 04 May 2025 14:08:55 GMT"
+          "Value": "Tue, 13 May 2025 14:28:13 GMT"
         },
         {
           "Name": "Cache-Control",
@@ -12098,7 +12861,7 @@
       "EndpointProperties": [
         {
           "Name": "integrity",
-          "Value": "sha256-NWIxwejcHtJ5yvljTypwFQBimL4GY/TpmkwWCoiPk+o="
+          "Value": "sha256-zWh55w+ZbK2vAr3YP/x79qpdqyDM6H/aBQ0rTfQwnAQ="
         }
       ]
     },
@@ -12397,6 +13160,167 @@
         {
           "Name": "integrity",
           "Value": "sha256-+BDBQp6fX0jhehydJj3yEmXwPsq4ccmpRwJadVX8HUA="
+        }
+      ]
+    },
+    {
+      "Route": "lib/bootstrap/dist/css/bootstrap.min.wj0xf2bef7.css",
+      "AssetFile": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\obj\\Debug\\net9.0\\compressed\\e3adra7pvw-wj0xf2bef7.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.000031567649"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "31677"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zWh55w+ZbK2vAr3YP/x79qpdqyDM6H/aBQ0rTfQwnAQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 13 May 2025 14:28:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"9Jd6TqaOdSHdhTaCGUmFl8c4aUeKalHi40wqPf0xH94=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wj0xf2bef7"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/bootstrap/dist/css/bootstrap.min.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-9Jd6TqaOdSHdhTaCGUmFl8c4aUeKalHi40wqPf0xH94="
+        }
+      ]
+    },
+    {
+      "Route": "lib/bootstrap/dist/css/bootstrap.min.wj0xf2bef7.css",
+      "AssetFile": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "234498"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"9Jd6TqaOdSHdhTaCGUmFl8c4aUeKalHi40wqPf0xH94=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 13 May 2025 14:28:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wj0xf2bef7"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/bootstrap/dist/css/bootstrap.min.css"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-9Jd6TqaOdSHdhTaCGUmFl8c4aUeKalHi40wqPf0xH94="
+        }
+      ]
+    },
+    {
+      "Route": "lib/bootstrap/dist/css/bootstrap.min.wj0xf2bef7.css.gz",
+      "AssetFile": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\obj\\Debug\\net9.0\\compressed\\e3adra7pvw-wj0xf2bef7.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "31677"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "text/css"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"zWh55w+ZbK2vAr3YP/x79qpdqyDM6H/aBQ0rTfQwnAQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 13 May 2025 14:28:13 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "wj0xf2bef7"
+        },
+        {
+          "Name": "label",
+          "Value": "lib/bootstrap/dist/css/bootstrap.min.css.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-zWh55w+ZbK2vAr3YP/x79qpdqyDM6H/aBQ0rTfQwnAQ="
         }
       ]
     },
@@ -13589,167 +14513,6 @@
         {
           "Name": "integrity",
           "Value": "sha256-Bhl6D0ngVAgx68NwXp2DEDO390PSrA5dlFHCQXY4WgM="
-        }
-      ]
-    },
-    {
-      "Route": "lib/bootstrap/dist/css/bootstrap.s35ty4nyc5.css",
-      "AssetFile": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\obj\\Debug\\net9.0\\compressed\\srtxekrlyx-s35ty4nyc5.gz",
-      "Selectors": [
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip",
-          "Quality": "0.000030073379"
-        }
-      ],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "33251"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"I0QuKxdK89NxyamT6EeIfl/MyifdDw+D8cUjkiXwoOU=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 04 May 2025 14:08:55 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "W/\"GKEF18s44B5e0MolXAkpkqLiEbOVlKf6VyYr/G/E6pw=\""
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "s35ty4nyc5"
-        },
-        {
-          "Name": "label",
-          "Value": "lib/bootstrap/dist/css/bootstrap.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-GKEF18s44B5e0MolXAkpkqLiEbOVlKf6VyYr/G/E6pw="
-        }
-      ]
-    },
-    {
-      "Route": "lib/bootstrap/dist/css/bootstrap.s35ty4nyc5.css",
-      "AssetFile": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "281046"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"GKEF18s44B5e0MolXAkpkqLiEbOVlKf6VyYr/G/E6pw=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 04 May 2025 14:08:55 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "s35ty4nyc5"
-        },
-        {
-          "Name": "label",
-          "Value": "lib/bootstrap/dist/css/bootstrap.css"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-GKEF18s44B5e0MolXAkpkqLiEbOVlKf6VyYr/G/E6pw="
-        }
-      ]
-    },
-    {
-      "Route": "lib/bootstrap/dist/css/bootstrap.s35ty4nyc5.css.gz",
-      "AssetFile": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\obj\\Debug\\net9.0\\compressed\\srtxekrlyx-s35ty4nyc5.gz",
-      "Selectors": [],
-      "ResponseHeaders": [
-        {
-          "Name": "Accept-Ranges",
-          "Value": "bytes"
-        },
-        {
-          "Name": "Content-Length",
-          "Value": "33251"
-        },
-        {
-          "Name": "Content-Type",
-          "Value": "text/css"
-        },
-        {
-          "Name": "ETag",
-          "Value": "\"I0QuKxdK89NxyamT6EeIfl/MyifdDw+D8cUjkiXwoOU=\""
-        },
-        {
-          "Name": "Last-Modified",
-          "Value": "Sun, 04 May 2025 14:08:55 GMT"
-        },
-        {
-          "Name": "Cache-Control",
-          "Value": "max-age=31536000, immutable"
-        },
-        {
-          "Name": "Content-Encoding",
-          "Value": "gzip"
-        },
-        {
-          "Name": "Vary",
-          "Value": "Content-Encoding"
-        }
-      ],
-      "EndpointProperties": [
-        {
-          "Name": "fingerprint",
-          "Value": "s35ty4nyc5"
-        },
-        {
-          "Name": "label",
-          "Value": "lib/bootstrap/dist/css/bootstrap.css.gz"
-        },
-        {
-          "Name": "integrity",
-          "Value": "sha256-I0QuKxdK89NxyamT6EeIfl/MyifdDw+D8cUjkiXwoOU="
         }
       ]
     },
@@ -21878,6 +22641,304 @@
         {
           "Name": "integrity",
           "Value": "sha256-JKWeHUaANNuffeRatdc54UCb84RoxjEw/nTq8Mops8Y="
+        }
+      ]
+    },
+    {
+      "Route": "site.6sx6pifph3.webmanifest",
+      "AssetFile": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\obj\\Debug\\net9.0\\compressed\\ex1c98g0od-6sx6pifph3.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.006097560976"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "163"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Q2NjZtu2MEFdHrSh8eCs0J1KHeDmJmajTADXVbMihIw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 13 May 2025 19:12:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/manifest+json"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"ep4Hzh9zhmiZF2At3Fp1dQrYQuYF/3ZPZxc1KcGBvwQ=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6sx6pifph3"
+        },
+        {
+          "Name": "label",
+          "Value": "site.webmanifest"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ep4Hzh9zhmiZF2At3Fp1dQrYQuYF/3ZPZxc1KcGBvwQ="
+        }
+      ]
+    },
+    {
+      "Route": "site.6sx6pifph3.webmanifest",
+      "AssetFile": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\site.webmanifest",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "263"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/manifest+json"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ep4Hzh9zhmiZF2At3Fp1dQrYQuYF/3ZPZxc1KcGBvwQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 13 May 2025 19:12:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6sx6pifph3"
+        },
+        {
+          "Name": "label",
+          "Value": "site.webmanifest"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-ep4Hzh9zhmiZF2At3Fp1dQrYQuYF/3ZPZxc1KcGBvwQ="
+        }
+      ]
+    },
+    {
+      "Route": "site.6sx6pifph3.webmanifest.gz",
+      "AssetFile": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\obj\\Debug\\net9.0\\compressed\\ex1c98g0od-6sx6pifph3.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "163"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/manifest+json"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Q2NjZtu2MEFdHrSh8eCs0J1KHeDmJmajTADXVbMihIw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 13 May 2025 19:12:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "6sx6pifph3"
+        },
+        {
+          "Name": "label",
+          "Value": "site.webmanifest.gz"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-Q2NjZtu2MEFdHrSh8eCs0J1KHeDmJmajTADXVbMihIw="
+        }
+      ]
+    },
+    {
+      "Route": "site.webmanifest",
+      "AssetFile": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\obj\\Debug\\net9.0\\compressed\\ex1c98g0od-6sx6pifph3.gz",
+      "Selectors": [
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip",
+          "Quality": "0.006097560976"
+        }
+      ],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "163"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Q2NjZtu2MEFdHrSh8eCs0J1KHeDmJmajTADXVbMihIw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 13 May 2025 19:12:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/manifest+json"
+        },
+        {
+          "Name": "ETag",
+          "Value": "W/\"ep4Hzh9zhmiZF2At3Fp1dQrYQuYF/3ZPZxc1KcGBvwQ=\""
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ep4Hzh9zhmiZF2At3Fp1dQrYQuYF/3ZPZxc1KcGBvwQ="
+        }
+      ]
+    },
+    {
+      "Route": "site.webmanifest",
+      "AssetFile": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\site.webmanifest",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "263"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/manifest+json"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"ep4Hzh9zhmiZF2At3Fp1dQrYQuYF/3ZPZxc1KcGBvwQ=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 13 May 2025 19:12:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-ep4Hzh9zhmiZF2At3Fp1dQrYQuYF/3ZPZxc1KcGBvwQ="
+        }
+      ]
+    },
+    {
+      "Route": "site.webmanifest.gz",
+      "AssetFile": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\obj\\Debug\\net9.0\\compressed\\ex1c98g0od-6sx6pifph3.gz",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "163"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "application/manifest+json"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"Q2NjZtu2MEFdHrSh8eCs0J1KHeDmJmajTADXVbMihIw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 13 May 2025 19:12:27 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "no-cache"
+        },
+        {
+          "Name": "Content-Encoding",
+          "Value": "gzip"
+        },
+        {
+          "Name": "Vary",
+          "Value": "Content-Encoding"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-Q2NjZtu2MEFdHrSh8eCs0J1KHeDmJmajTADXVbMihIw="
         }
       ]
     }

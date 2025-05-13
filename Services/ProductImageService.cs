@@ -7,9 +7,9 @@ namespace Agri_EnergyConnect.Services
 {
     public class ProductImageService:IProductImageService
     {
-        private readonly AgriEnergyConnectDbContext _context;
+        private readonly St10385722AgriEnergyConnectDbContext _context;
 
-        public ProductImageService(AgriEnergyConnectDbContext context)
+        public ProductImageService(St10385722AgriEnergyConnectDbContext context)
         {
             _context = context;
         }

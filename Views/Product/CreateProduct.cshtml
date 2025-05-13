@@ -1,8 +1,10 @@
 ﻿@model Agri_EnergyConnect.Models.Product
+<br/>
+<br/>
+<form asp-action="CreateProduct" method="post" enctype="multipart/form-data" style="max-width: 400px; margin: auto; padding: 20px; border: 1px solid #ccc; border-radius: 10px; background-color: #f9f9f9;" class="text-dark">
 <h1>Create a New Product</h1>
 <p>Please fill out the form below to create a new product.</p>
-
-<form asp-action="CreateProduct" method="post" enctype="multipart/form-data" style="max-width: 400px; margin: auto; padding: 20px; border: 1px solid #ccc; border-radius: 10px; background-color: #f9f9f9;">
+<br/>
     <div style="margin-bottom: 15px;">
         <label for="ProductName" style="display: block; font-weight: bold;">Product name</label>
         <input type="text" asp-for="@Model.ProductName" id="ProductName" placeholder="Enter a product name" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"/>
@@ -20,11 +22,39 @@
         <input type="number" name="Quantity" asp-for="@Model.Quantity" id="Quantity" placeholder="Quantity (if applicable)" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"/>
     </div>
     <div style="margin-bottom: 15px;">
+        <label for="Price" style="display: block; font-weight: bold;">Price</label>
+        <input type="number" name="Price" asp-for="@Model.Price" id="Price" placeholder="R" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"/>
+    </div>
+    <div style="margin-bottom: 15px;">
         <label for="ProductImage" style="display: block; font-weight: bold;">Product Image</label>
-        <input type="file" name="ProductImage" asp-for="ProductImages" id="ProductImage" accept="image/*" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" />
+        <input type="file" name="ProductImage" asp-for="ProductImages" id="ProductImage" accept=".jpg,.jpeg,.png" size="10mb" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" />
+        <img id="PicturePreview" src="#" alt="Image Preview" style="display:none; max-width: 200px; margin-top: 10px;" />
+        @if(ViewBag.FileToBigError != null){
+            <div class="alert alert-danger mt-3" role="alert">
+                @ViewBag.FileToBigError
+            </div>
+        }
     </div>
     <div style="text-align: center;">
-        <input type="submit" class="btn btn-primary" value="Add product" style="padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;"/>
+        <input type="submit" class="btn btn-primary" value="Add product" style="padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;"/>
     </div>
-    
 </form>
+@section Scripts {
+<script>
+       document.getElementById("ProductImage").addEventListener("change", function (event) {
+           const file = event.target.files[0];
+           const preview = document.getElementById("PicturePreview");
+           if (file) {
+               const reader = new FileReader();
+               // Display the image preview
+               reader.onload = function (e) {
+                   preview.src = e.target.result;
+                   preview.style.display = "block";
+               };
+               reader.readAsDataURL(file); // Read the file as a data URL
+           } else {
+               preview.style.display = "none"; // Hide the preview if no file is selected
+           }
+       });
+</script>
+}

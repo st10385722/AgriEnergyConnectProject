@@ -103,9 +103,10 @@ namespace Agri_EnergyConnect.Controllers
             //after user details verified
             // In your Login action
             var user = _ur.GetUserWithRole(email);
+            //couldnt find user
             if(user == null){
-                ModelState.AddModelError("Password", "Username or password is incorrect!");
-                ViewBag.ErrorMessage = "Username or password is incorrect!";
+                ModelState.AddModelError("Password", "User does not exist");
+                ViewBag.ErrorMessage = "User does not exist. Get in contact with our team to setup your profile";
                 return View(user);
             }
             var role = _ur.getUserRole(user.RoleId);
@@ -127,9 +128,13 @@ namespace Agri_EnergyConnect.Controllers
                 
                 await _httpContext.HttpContext.SignInAsync("CustomAuthentication", principal);
                 return RedirectToAction("Index", "Home");
+            } else {
+                ModelState.AddModelError("Password", "Username or password incorrect");
+                ViewBag.ErrorMessage = "Username or password incorrect";
+                return View(user);
             }
             //error, return page
-            return View(email, password);
+            return View();
         }
         [HttpPost]
         public async Task<ActionResult> Logout()

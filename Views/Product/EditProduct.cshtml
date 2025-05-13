@@ -1,0 +1,53 @@
+﻿@model Agri_EnergyConnect.Models.Product
+<br />
+<br />
+<form asp-action="EditProduct" method="post" enctype="multipart/form-data" style="max-width: 400px; margin: auto; padding: 20px; border: 1px solid #ccc; border-radius: 10px; background-color: #f9f9f9;" class="text-dark">
+    <h1>Edit Product</h1>
+    <p>Update the fields below to edit the product.</p>
+    <input type="hidden" name="farmerId" value="@ViewBag.FarmerId" />
+    <br />
+    <input type="hidden" asp-for="ProductId" />
+    <div style="margin-bottom: 15px;">
+        <label for="ProductName" style="display: block; font-weight: bold;">Product Name</label>
+        <input type="text" asp-for="ProductName" id="ProductName" value="@Model.ProductName" placeholder="Enter a product name" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" />
+    </div>
+    <div style="margin-bottom: 15px;">
+        <label for="ProductType" style="display: block; font-weight: bold;">Product Type</label>
+        <input type="text" asp-for="ProductType" id="ProductType" value="@Model.ProductType" placeholder="Enter product type" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" />
+    </div>
+    <div style="margin-bottom: 15px;">
+        <label for="ProductDescription" style="display: block; font-weight: bold;">Product Description</label>
+        <textarea cols="10" asp-for="ProductDescription" id="ProductDescription" placeholder="Enter a description" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;">@Model.ProductDescription</textarea>
+    </div>
+    <div style="margin-bottom: 15px;">
+        <label for="Quantity" style="display: block; font-weight: bold;">Quantity</label>
+        <input type="number" asp-for="Quantity" id="Quantity" value="@Model.Quantity" placeholder="Quantity (if applicable)" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" />
+    </div>
+    <div style="margin-bottom: 15px;">
+        <label for="Price" style="display: block; font-weight: bold;">Price</label>
+        <input type="number" asp-for="Price" id="Price" value="@Model.Price" placeholder="R" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" />
+    </div>
+    <div style="margin-bottom: 15px;">
+        <label for="ProductImage" style="display: block; font-weight: bold;">Product Image</label>
+        <input type="file" name="ProductImage" id="ProductImage" accept=".jpg,.jpeg,.png" style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" />
+        <img id="PicturePreview" src="@Url.Action("GetProductImage", "Product", new { imageId = Model.ProductImageId })" alt="Current Image" style="max-width: 200px; margin-top: 10px;" />
+    </div>
+    <div style="text-align: center;">
+        <input type="submit" class="btn btn-primary" value="Update Product" style="padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;" />
+    </div>
+</form>
+@section Scripts {
+<script>
+    document.getElementById("ProductImage").addEventListener("change", function (event) {
+        const file = event.target.files[0];
+        const preview = document.getElementById("PicturePreview");
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                preview.src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+    });
+</script>
+}

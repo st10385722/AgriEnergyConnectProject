@@ -1,0 +1,55 @@
+﻿@model IEnumerable<(Agri_EnergyConnect.Models.Farmer Farmer, string Username)>
+
+<br />
+<a asp-action="ViewFarmerIndex" asp-controller="Employee" class="btn btn-primary mb-4">Back to farmers</a>
+<h1 class="text-center mb-4 text-light">Farmer Details</h1>
+
+<div class="container">
+    <div class="row justify-content-center">
+        @foreach (var item in Model)
+        {
+            <div class="col-lg-6 col-md-8 col-sm-10 text-center">
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary text-center">@item.Username</h5>
+                        <br/>
+                        <p class="card-text">
+                            <strong>Farm Name:</strong> @item.Farmer.FarmName
+                        </p>
+                        <p class="card-text">
+                            <strong>Farm Type:</strong> @item.Farmer.FarmType
+                        </p>
+                        <p class="card-text">
+                            <strong>Harvesting Date:</strong> @item.Farmer.HavestingDate.ToString("yyyy-MM-dd")
+                        </p>
+                        <p class="card-text">
+                            <strong>Crop Type:</strong> 
+                            @if (item.Farmer.CropType != null)
+                            {
+                                @item.Farmer.CropType
+                            }
+                            else
+                            {
+                                <span>N/A</span>
+                            }
+                        </p>
+                        <p class="card-text">
+                            <strong>Livestock Type:</strong> 
+                            @if (item.Farmer.LivestockType != null)
+                            {
+                                @item.Farmer.LivestockType
+                            }
+                            else
+                            {
+                                <span>N/A</span>
+                            }
+                        </p>
+                        <p class="card-text">
+                            <strong>Number of Employees:</strong> @item.Farmer.NumberOfEmployees
+                        </p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

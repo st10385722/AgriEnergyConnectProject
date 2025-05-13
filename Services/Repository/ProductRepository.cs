@@ -7,9 +7,9 @@ namespace Agri_EnergyConnect.Services.Repository;
 
 public class ProductRepository: IProductRepository
 {
-     private readonly AgriEnergyConnectDbContext _context;
+     private readonly St10385722AgriEnergyConnectDbContext _context;
 
-    public ProductRepository(AgriEnergyConnectDbContext context){
+    public ProductRepository(St10385722AgriEnergyConnectDbContext context){
         _context = context;
     }
     public async Task<IEnumerable<Product>> GetAll(){

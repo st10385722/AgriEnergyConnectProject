@@ -4,13 +4,13 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Agri_EnergyConnect.Models;
 
-public partial class AgriEnergyConnectDbContext : DbContext
+public partial class St10385722AgriEnergyConnectDbContext : DbContext
 {
-    public AgriEnergyConnectDbContext()
+    public St10385722AgriEnergyConnectDbContext()
     {
     }
 
-    public AgriEnergyConnectDbContext(DbContextOptions<AgriEnergyConnectDbContext> options)
+    public St10385722AgriEnergyConnectDbContext(DbContextOptions<St10385722AgriEnergyConnectDbContext> options)
         : base(options)
     {
     }
@@ -27,7 +27,7 @@ public partial class AgriEnergyConnectDbContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Server=IBM-Laptop;Database=agri-energy-connect-db;Trusted_Connection=True;TrustServerCertificate=True;");
+        => optionsBuilder.UseSqlServer("Server=IBM-Laptop;Database=st10385722-agri-energy-connect-db;Trusted_Connection=True;TrustServerCertificate=True;");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -76,9 +76,13 @@ public partial class AgriEnergyConnectDbContext : DbContext
                 .HasColumnType("datetime")
                 .HasColumnName("created_at");
             entity.Property(e => e.FarmerId).HasColumnName("farmer_id");
+            entity.Property(e => e.Price)
+                .HasColumnType("decimal(10, 2)")
+                .HasColumnName("price");
             entity.Property(e => e.ProductDescription)
                 .IsUnicode(false)
                 .HasColumnName("product_description");
+            entity.Property(e => e.ProductImageId).HasColumnName("product_image_id");
             entity.Property(e => e.ProductName)
                 .IsUnicode(false)
                 .HasColumnName("product_name");

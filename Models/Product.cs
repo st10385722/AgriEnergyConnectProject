@@ -21,6 +21,10 @@ public partial class Product
 
     public int? FarmerId { get; set; }
 
+    public int? ProductImageId { get; set; }
+
+    public decimal? Price { get; set; }
+
     public virtual Farmer? Farmer { get; set; }
 
     public virtual ICollection<ProductImage> ProductImages { get; set; } = new List<ProductImage>();

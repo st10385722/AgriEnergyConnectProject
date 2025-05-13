@@ -18,7 +18,6 @@ C:\Users\Niel\source\vsc\Agri-EnergyConnect\obj\Debug\net9.0\scopedcss\Views\Sha
 C:\Users\Niel\source\vsc\Agri-EnergyConnect\obj\Debug\net9.0\scopedcss\bundle\Agri-EnergyConnect.styles.css
 C:\Users\Niel\source\vsc\Agri-EnergyConnect\obj\Debug\net9.0\scopedcss\projectbundle\Agri-EnergyConnect.bundle.scp.css
 C:\Users\Niel\source\vsc\Agri-EnergyConnect\obj\Debug\net9.0\compressed\fkshb06w33-b9sayid5wm.gz
-C:\Users\Niel\source\vsc\Agri-EnergyConnect\obj\Debug\net9.0\compressed\gynvmgv3al-61n19gt1b8.gz
 C:\Users\Niel\source\vsc\Agri-EnergyConnect\obj\Debug\net9.0\compressed\pig5p9wjwu-xtxxf3hu2r.gz
 C:\Users\Niel\source\vsc\Agri-EnergyConnect\obj\Debug\net9.0\compressed\sw0xfh2usu-bqjiyaj88i.gz
 C:\Users\Niel\source\vsc\Agri-EnergyConnect\obj\Debug\net9.0\compressed\a0ca3kwtn5-c2jlpeoesf.gz
@@ -44,9 +43,7 @@ C:\Users\Niel\source\vsc\Agri-EnergyConnect\obj\Debug\net9.0\compressed\1rdwr4to
 C:\Users\Niel\source\vsc\Agri-EnergyConnect\obj\Debug\net9.0\compressed\67y1uhtqz2-j5mq2jizvt.gz
 C:\Users\Niel\source\vsc\Agri-EnergyConnect\obj\Debug\net9.0\compressed\5su0phjzrk-06098lyss8.gz
 C:\Users\Niel\source\vsc\Agri-EnergyConnect\obj\Debug\net9.0\compressed\hk88cp93ad-nvvlpmu67g.gz
-C:\Users\Niel\source\vsc\Agri-EnergyConnect\obj\Debug\net9.0\compressed\srtxekrlyx-s35ty4nyc5.gz
 C:\Users\Niel\source\vsc\Agri-EnergyConnect\obj\Debug\net9.0\compressed\bargo95ycb-pj5nd1wqec.gz
-C:\Users\Niel\source\vsc\Agri-EnergyConnect\obj\Debug\net9.0\compressed\e3adra7pvw-46ein0sx1k.gz
 C:\Users\Niel\source\vsc\Agri-EnergyConnect\obj\Debug\net9.0\compressed\uy626vtit4-v0zj4ognzu.gz
 C:\Users\Niel\source\vsc\Agri-EnergyConnect\obj\Debug\net9.0\compressed\ua8t50grp3-37tfw0ft22.gz
 C:\Users\Niel\source\vsc\Agri-EnergyConnect\obj\Debug\net9.0\compressed\iozf4x88om-hrwsygsryq.gz
@@ -231,3 +228,7 @@ C:\Users\Niel\source\vsc\Agri-EnergyConnect\obj\Debug\net9.0\Agri-EnergyConnect.
 C:\Users\Niel\source\vsc\Agri-EnergyConnect\obj\Debug\net9.0\Agri-Ene.14389D07.Up2Date
 C:\Users\Niel\source\vsc\Agri-EnergyConnect\bin\Debug\net9.0\Crypto.dll
 C:\Users\Niel\source\vsc\Agri-EnergyConnect\obj\Debug\net9.0\Agri-EnergyConnect.sourcelink.json
+C:\Users\Niel\source\vsc\Agri-EnergyConnect\obj\Debug\net9.0\compressed\e3adra7pvw-wj0xf2bef7.gz
+C:\Users\Niel\source\vsc\Agri-EnergyConnect\obj\Debug\net9.0\compressed\gynvmgv3al-ho8pueqyxr.gz
+C:\Users\Niel\source\vsc\Agri-EnergyConnect\obj\Debug\net9.0\compressed\srtxekrlyx-6rp9vp0j4j.gz
+C:\Users\Niel\source\vsc\Agri-EnergyConnect\obj\Debug\net9.0\compressed\ex1c98g0od-6sx6pifph3.gz

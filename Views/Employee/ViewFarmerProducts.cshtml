@@ -1,16 +1,48 @@
 ﻿@model IEnumerable<Agri_EnergyConnect.Models.Product>
 <br/>
 <br/>
+<a asp-action="ViewFarmerIndex" asp-controller="Employee" class="btn btn-primary">Back to farmers</a>
+<h1 class="text-center text-light">Farmer's products</h1>
+<br/>
+<br/>
+@if(Model.Count() > 0){
+<div class="container mb-4">
+    <form method="get" asp-action="ViewFarmerProducts" asp-controller="Employee">
+        <input type="hidden" name="farmerId" value="@ViewBag.FarmerId" />
+        <div class="row">
+            <!-- Sort by Product Type -->
+            <div class="col-md-4">
+                <label for="productType" class="form-label">Filter by Product Type</label>
+                <input type="text" name="productType" id="productType" class="form-control" placeholder="Enter product type" />
+            </div>
+            <!-- Sort by Date Range -->
+            <div class="col-md-4">
+                <label for="startDate" class="form-label">Start Date:</label>
+                <input type="date" name="startDate" id="startDate" class="form-control" />
+            </div>
+            <div class="col-md-4">
+                <label for="endDate" class="form-label">End Date:</label>
+                <input type="date" name="endDate" id="endDate" class="form-control" />
+            </div>
+            @{
+                if(ViewBag.ErrorMessage != null)
+                {
+                    <div class="alert alert-danger mt-3" role="alert">
+                        @ViewBag.ErrorMessage
+                    </div>
+                }
+            }
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-4 d-flex align-items-end">
+                <button type="submit" class="btn btn-primary me-2">Sort</button>
+                <a href="@Url.Action("ViewFarmerProducts", "Employee", new { farmerId = ViewBag.FarmerId })" class="btn btn-secondary">Reset</a>
+            </div>
+        </div>
+    </form>
+</div>
 
-@if (!string.IsNullOrEmpty(ViewBag.WarningMessage))
-{
-    <div class="alert alert-warning" role="alert">
-        @ViewBag.WarningMessage
-    </div>
-}
-<div class="container text-center">
-    <h1 class="text-light">My Products</h1>
-    <br/>
+<div class="container">
     <div class="row">
         @foreach (var product in Model)
         {
@@ -53,7 +85,7 @@
                             }
                             else
                             {
-                                <span>No image uploaded</span>
+                                <span>No Image</span>
                             }
                         </div>
                         <div class="text-center mt-3">
@@ -70,6 +102,12 @@
         }
     </div>
 </div>
+}
+else {
+    <div class="alert alert-info text-center" role="alert">
+        No products found for this farmer.
+    </div>
+}
 
 <!-- Modal to display the image -->
 <div id="imageModal" class="modal" tabindex="-1" role="dialog">

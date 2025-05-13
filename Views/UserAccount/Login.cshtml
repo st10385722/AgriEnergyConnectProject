@@ -1,8 +1,12 @@
 ﻿@model Agri_EnergyConnect.Models.User
-<h1>Sign in</h1>
-<p>Sign in now</p>
-
+<br/>
+<br/>
+<br/>
 <form asp-action="Login" method="post" style="max-width: 400px; margin: auto; padding: 20px; border: 1px solid #ccc; border-radius: 10px; background-color: #f9f9f9;">
+    <h1>Sign in</h1>
+    <br/>
+    <h4>Please enter your details</h4>
+    <br/>
     <div style="margin-bottom: 15px;">
         <label for="Email" style="display: block; font-weight: bold;">Email</label>
         <input type="text" asp-for="@Model.Email" id="Email" placeholder="Enter your Email" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"/>
@@ -13,11 +17,11 @@
     </div>
     @if(ViewBag.ErrorMessage != null)
     {
-        <div style="color: red; text-align: center; margin-top: 10px;">
+        <div class="alert alert-danger" style="margin-top: 10px;">
             @ViewBag.ErrorMessage
         </div>
     }
     <div style="text-align: center;">
-        <input type="submit" class="btn btn-primary" value="Login" style="padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;"/>
+        <input type="submit" class="btn btn-primary" value="Login" style="padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;"/>
     </div>
 </form>`

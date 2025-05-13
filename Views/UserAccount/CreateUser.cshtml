@@ -1,8 +1,11 @@
 ﻿@model Agri_EnergyConnect.Models.User
-<h1>Create a New User</h1>
-<p>Please fill out the form below to create a new user account.</p>
-
+<br/>
+<br/>
 <form asp-action="CreateUserAction" method="post" style="max-width: 400px; margin: auto; padding: 20px; border: 1px solid #ccc; border-radius: 10px; background-color: #f9f9f9;">
+    <h1>Create a New User</h1>
+    <br/>
+    <h4>Please fill out the form below to create a new user account.</h4>
+    <br/>
     <div style="margin-bottom: 15px;">
         <label for="Username" style="display: block; font-weight: bold;">First and last name</label>
         <input type="text" asp-for="@Model.Username" id="Username" placeholder="Enter a username" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"/>
@@ -19,7 +22,8 @@
         <label for="ConfirmPassword" style="display: block; font-weight: bold;">Confirm Password</label>
         <input type="password" name="ConfirmPassword" id="ConfirmPassword" placeholder="Re-enter your password" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;"/>
     </div>
+    <br/>
     <div style="text-align: center;">
-        <input type="submit" class="btn btn-primary" value="Create User" style="padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer;"/>
+        <input type="submit" class="btn btn-primary" value="Create User" style="padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;"/>
     </div>
 </form>

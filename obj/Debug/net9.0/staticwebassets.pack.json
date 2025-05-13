@@ -5,8 +5,36 @@
       "PackagePath": "staticwebassets\\Agri-EnergyConnect.mtwb1ihz3g.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\android-chrome-192x192.png",
+      "PackagePath": "staticwebassets\\android-chrome-192x192.png"
+    },
+    {
+      "Id": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\android-chrome-512x512.png",
+      "PackagePath": "staticwebassets\\android-chrome-512x512.png"
+    },
+    {
+      "Id": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\apple-touch-icon.png",
+      "PackagePath": "staticwebassets\\apple-touch-icon.png"
+    },
+    {
+      "Id": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\content\\tree_background.png",
+      "PackagePath": "staticwebassets\\content\\tree_background.png"
+    },
+    {
+      "Id": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\content\\tree_background_new.jpg",
+      "PackagePath": "staticwebassets\\content\\tree_background_new.jpg"
+    },
+    {
       "Id": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\favicon-16x16.png",
+      "PackagePath": "staticwebassets\\favicon-16x16.png"
+    },
+    {
+      "Id": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\favicon-32x32.png",
+      "PackagePath": "staticwebassets\\favicon-32x32.png"
     },
     {
       "Id": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\favicon.ico",
@@ -255,6 +283,10 @@
     {
       "Id": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\lib\\jquery\\dist\\jquery.slim.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.slim.min.map"
+    },
+    {
+      "Id": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\site.webmanifest",
+      "PackagePath": "staticwebassets\\site.webmanifest"
     },
     {
       "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.Agri-EnergyConnect.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
