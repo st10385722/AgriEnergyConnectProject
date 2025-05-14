@@ -57,7 +57,7 @@ namespace Agri_EnergyConnect.Controllers
         [Authorize(Roles = "admin, employee")]
         [HttpPost]
         //passing the password and cofirm password for checking against each other
-        public async Task<ActionResult> CreateUserAction(User user, string Password, string ConfirmPassword){
+        public async Task<ActionResult> CreateUser(User user, string Password, string ConfirmPassword){
             //Removing all of these Model state checks as they are assigned in the method
             ModelState.Remove("PasswordHash");
             ModelState.Remove("RoleId");
@@ -74,7 +74,8 @@ namespace Agri_EnergyConnect.Controllers
                 //checks if the username and password match
                 if(!Password.Equals(ConfirmPassword)){
                     ModelState.AddModelError("Password", "Password does not match confirm password!");
-                    return View(user);
+                    ViewData["passwordDoesntMatch"] = "Error! Passwords do not match";
+                    return View();
                 }
                 //creates a new user id via the absolute valud of GetHashCode
                 user.UserId = Math.Abs(Guid.NewGuid().GetHashCode());
@@ -263,6 +264,9 @@ namespace Agri_EnergyConnect.Controllers
                 // Delete the farmer
                 await _fr.Delete(farmer.FarmerId);
             // Finally, delete the user
+            if(userId == _cus.GetCurrentUserId()){
+                await Logout();
+            }
             await _ur.Delete(userId);
             await _ur.SaveAsync();
 

@@ -143,7 +143,7 @@ public static class SeedData
                 {
                     ProductId = 1,
                     ProductName = "Organic Corn",
-                    ProductType = "Crop",
+                    ProductType = "Vegtable",
                     ProductDescription = "High-quality organic corn",
                     Quantity = 100,
                     Price = 50.00m,
@@ -155,7 +155,7 @@ public static class SeedData
                 {
                     ProductId = 2,
                     ProductName = "Fresh Tomatoes",
-                    ProductType = "Crop",
+                    ProductType = "Fruit",
                     ProductDescription = "Freshly harvested tomatoes",
                     Quantity = 200,
                     Price = 30.00m,
@@ -198,8 +198,8 @@ public static class SeedData
         {
             var productImages = new List<(int productId, string fileName)>
             {
-                (1, "tomatoe.jpeg"),
-                (2, "corn.jpeg"),
+                (1, "corn.jpeg"),
+                (2, "tomatoe.jpeg"),
                 (3, "Chicken.jpeg"),
                 (4, "Mango.jpeg")
             };

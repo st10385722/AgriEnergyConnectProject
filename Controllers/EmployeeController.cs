@@ -78,7 +78,7 @@ namespace Agri_EnergyConnect.Controllers
                     var regex = new Regex(productType, RegexOptions.IgnoreCase);
                     products = products.Where(p => regex.IsMatch(p.ProductType));
                     if(products == null){
-                        ViewBag.ErrorMessage = "No products found matching the specified type.";
+                        ViewBag.NoProducts = "No products found matching the specified type.";
                     }
                 }
                 catch (ArgumentException)
