@@ -4,6 +4,8 @@ This application guide will walk you through the process of setting up the Agri 
 
 ---
 
+`application walkthrough` [YOUTUBE VIDEO](https://youtu.be/wDp07HFADWY)
+
 ## ‼️Prerequisites  
 **N.B.** References for the code can be found at the bottom of the `Program.cs` file  
 
@@ -154,3 +156,26 @@ This application has 3 roles, which separate the functions of the application. T
 
 
 🚀 **With this guide, you can now explore the Argi Energy Connect app and witness its future potential**
+
+## References
+Make a ReadMe. n.d. Make a readme. [Online]. Available at: https://www.makeareadme.com/ [Accessed 12 May 2025]
+
+
+Bootswatch. n.d. Free themes for bootstrap. [Online]. Available at: https://bootswatch.com/ [Accessed 12 May 2025]
+
+
+W3School. n.d. HTML Styles - CSS. [Online]. Available at: https://www.w3schools.com/html/html_css.asp [Accessed 12 May 2025]
+
+
+G, Courtney J. 2023. Essential farm records and data you need to be tracking, FarmBite.com. 27 September 2023. [Online]. Available at: //https://www.farmbrite.com/post/essential-farm-records-and-data-you-need-to-be-tracking [Accessed 12 May 2025]
+
+
+LearnSQL.com Team. 2023. SQL Server cheat sheet, LearnSQL.com. 4 September 2023. [Online]. Available at: https://learnsql.com/blog/sql-server-cheat-sheet/#:~:text=This%20cheat%20sheet%20is%20a%20comprehensive%20guide%20to,commands%20such%20as%20SELECT%2C%20INSERT%2C%20UPDATE%2C%20and%20DELETE. [Accessed 12 May 2025]
+
+
+AppliedK. 2024. ASP NET Core How to seed data at design time & run time by DbContext AppliedK. [video online]. Available at: https://www.youtube.com/watch?v=k6Il3YYputM [Accessed 13 May 2025]
+
+
+GeeksForGeeks.2024. Repository design pattern, 1 November 2024. [Online]. Available at: https://www.geeksforgeeks.org/repository-design-pattern/ [Accessed 12 May 2025]
+
+
