@@ -4,6 +4,8 @@ This application guide will walk you through the process of setting up the Agri 
 
 ---
 
+`application walkthrough` (YOUTUBE VIDEO)[https://youtu.be/wDp07HFADWY]
+
 ## ‼️Prerequisites  
 **N.B.** References for the code can be found at the bottom of the `Program.cs` file  
 
