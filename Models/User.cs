@@ -5,6 +5,8 @@ namespace Agri_EnergyConnect.Models;
 
 public partial class User
 {
+    //Model scaffolded from database
+
     public int UserId { get; set; }
 
     public string Username { get; set; } = null!;

@@ -10,10 +10,13 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace Agri_EnergyConnect.Controllers
 {
+    //this controller is responsible for the registration and login
+    //of new users
     public class UserAccountController : Controller
     {
+        //repository services 
         private IUserRepository _ur;
-        // private HttpContext _httpContext;
+        //used for keeping cookies after leaving app
         private IHttpContextAccessor _httpContext;
 
         private readonly ICurrentUserService _cus;
@@ -23,7 +26,6 @@ namespace Agri_EnergyConnect.Controllers
         IHttpContextAccessor httpContext,
         ICurrentUserService cus){
             _ur = ur;
-            //_httpContext = httpContext;
             _httpContext = httpContext;
             _cus = cus;
         }
@@ -32,6 +34,7 @@ namespace Agri_EnergyConnect.Controllers
         {        
             return View();
         }
+        //admins and employees both create users
         [HttpGet]
         [Authorize(Roles = "admin, employee")]
         public ActionResult CreateUser(){
@@ -40,7 +43,9 @@ namespace Agri_EnergyConnect.Controllers
 
         [Authorize(Roles = "admin, employee")]
         [HttpPost]
+        //passing the password and cofirm password for checking against each other
         public async Task<ActionResult> CreateUserAction(User user, string Password, string ConfirmPassword){
+            //Removing all of these Model state checks as they are assigned in the method
             ModelState.Remove("PasswordHash");
             ModelState.Remove("RoleId");
             ModelState.Remove("CreatedAt");
@@ -50,24 +55,30 @@ namespace Agri_EnergyConnect.Controllers
             ModelState.Remove("CreatedByNavigation"); 
 
             if(ModelState.IsValid){
+                //gets the user id for assigning to the user
                 var creatorId = _cus.GetCurrentUserId();
-                //if(creatorId == 0) {return Unauthorized();}
                 var currentUserRole = _cus.GetCurrentUserRole();
+                //checks if the username and password match
                 if(!Password.Equals(ConfirmPassword)){
                     ModelState.AddModelError("Password", "Password does not match confirm password!");
                     return View(user);
                 }
+                //creates a new user id via the absolute valud of GetHashCode
                 user.UserId = Math.Abs(Guid.NewGuid().GetHashCode());
+                //Making a new Identity password hasher object for hashing passwords
+                //preventing them from being stored in plaintext
                 var hasher = new PasswordHasher<object>();
+                //hashes the password to check if they match
+                //another way is to unhash the password and see if they both match
+                //assigning the new hashed password to the user
                 string hashedPassword = hasher.HashPassword(user, Password);
                 user.PasswordHash = hashedPassword;
+                //this switch checks the role of the current user, and assigns the role based
+                //on their own role
                 int roleToAssign;
                 //to verify
-                //var result = hasher.VerifyHashedPassword(null, hashedPassword, "input_password");
-                // Returns PasswordVerificationResult.Success or Failed
                 switch(currentUserRole){
                     case "admin":
-                        //change for auto generating
                         roleToAssign = 2;
                     break;
                     case "employee":
@@ -76,28 +87,28 @@ namespace Agri_EnergyConnect.Controllers
                     default: roleToAssign = -1; 
                     break;
                 }
+                //saves the role to the user, as well as populating the rest of
+                //the values
                 user.RoleId = roleToAssign;
                 user.CreatedAt = DateTime.UtcNow;
                 user.CreatedBy = creatorId;
 
+                //inserting and saving the values
                 await _ur.Insert(user);
                 await _ur.SaveAsync();
-                //come back to this
-                // if (currentUserRole == "employee")
-                // {
-                //     return RedirectToAction("FillFarmerDetails", "Farmer", new { userId = user.UserId });
-                // }
                 return RedirectToAction("Index", "Home");
             }
 
             //go this far, something wrong, return view
             return View();
         }
+        //Httpget for loging into new account
         [HttpGet]
         public ActionResult Login(){
             return View();
         }
 
+        //httppost method for loggining in
         [HttpPost]
         public async Task<ActionResult> Login(string email, string password){
             //after user details verified
@@ -109,23 +120,29 @@ namespace Agri_EnergyConnect.Controllers
                 ViewBag.ErrorMessage = "User does not exist. Get in contact with our team to setup your profile";
                 return View(user);
             }
+            //gets user role
             var role = _ur.getUserRole(user.RoleId);
+            //new hasher object, increase security if you dont use the same password hasher object
             var hasher = new PasswordHasher<object>();
+            //verfied the inputted password with the hashed password
             var result = hasher.VerifyHashedPassword(user, user.PasswordHash, password);
             // Returns PasswordVerificationResult.Success or Failed
 
+            //if it passes, do the following
             if (result == PasswordVerificationResult.Success)
             {
+                //make a claim that allows the user to be registed as as a online entity
                 var claims = new List<Claim>
                 {
                     new Claim(ClaimTypes.NameIdentifier, user.UserId.ToString()),
                     new Claim(ClaimTypes.Name, user.Email),
                     new Claim(ClaimTypes.Role, role.RoleName),
                 };
-
+                //uusing the claim from the custom auth created for identity in program.cs
                 var identity = new ClaimsIdentity(claims, "CustomAuthentication");
                 var principal = new ClaimsPrincipal(identity);
                 
+                //uses the httpcontext IHttpAccessor to keep the user signed in
                 await _httpContext.HttpContext.SignInAsync("CustomAuthentication", principal);
                 return RedirectToAction("Index", "Home");
             } else {
@@ -133,9 +150,8 @@ namespace Agri_EnergyConnect.Controllers
                 ViewBag.ErrorMessage = "Username or password incorrect";
                 return View(user);
             }
-            //error, return page
-            return View();
         }
+        //simple method to log out of app
         [HttpPost]
         public async Task<ActionResult> Logout()
         {

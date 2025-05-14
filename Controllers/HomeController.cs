@@ -4,6 +4,7 @@ using Agri_EnergyConnect.Models;
 
 namespace Agri_EnergyConnect.Controllers;
 
+//simple Home controller
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
@@ -14,11 +15,6 @@ public class HomeController : Controller
     }
 
     public IActionResult Index()
-    {
-        return View();
-    }
-
-    public IActionResult Privacy()
     {
         return View();
     }

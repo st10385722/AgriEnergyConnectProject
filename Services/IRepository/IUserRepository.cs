@@ -2,6 +2,7 @@ using System;
 using Agri_EnergyConnect.Models;
 
 namespace Agri_EnergyConnect.Services.IRepository;
+//interface to abstract the database access from the user controller code
 
 public interface IUserRepository
 {

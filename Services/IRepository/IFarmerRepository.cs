@@ -3,6 +3,7 @@ using Agri_EnergyConnect.Models;
 
 namespace Agri_EnergyConnect.Services.IRepository;
 
+//interface to abstract the database access from the farmer controller code
 public interface IFarmerRepository
 {
     Task<IEnumerable<Farmer>> GetAll();

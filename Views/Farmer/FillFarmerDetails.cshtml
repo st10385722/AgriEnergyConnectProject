@@ -54,6 +54,22 @@
     </div>
 </form>
 
+<!--
+    This java script is used for enabling the inputs for the
+    crop type and livestock type
+>-->
+<!-- 
+    The code below it takes the input from the newly displayed crop and livestock types
+    and adds it to a variable for saving to the database
+
+    when you click the add button, it saves the value entered
+    and the clears the table to allow you to add a new livestock or crop
+
+    it also generates a delete button that removes it from this variable
+
+    When you click the save button, it gets added to the controller alongside
+    the normal inputs
+>-->
 <script>
     function toggleCropType() {
         const section = document.getElementById('cropTypeSection');
@@ -64,7 +80,6 @@
         const section = document.getElementById('livestockTypeSection');
         section.style.display = section.style.display === 'none' ? 'block' : 'none';
     }
-
     function addCropType() {
         const input = document.getElementById('cropTypeInput');
         const list = document.getElementById('cropTypeList');

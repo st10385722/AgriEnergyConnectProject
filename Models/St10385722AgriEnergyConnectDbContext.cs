@@ -6,6 +6,7 @@ namespace Agri_EnergyConnect.Models;
 
 public partial class St10385722AgriEnergyConnectDbContext : DbContext
 {
+    //Model scaffolded from database
     public St10385722AgriEnergyConnectDbContext()
     {
     }
@@ -24,10 +25,6 @@ public partial class St10385722AgriEnergyConnectDbContext : DbContext
     public virtual DbSet<User> Users { get; set; }
 
     public virtual DbSet<UserRole> UserRoles { get; set; }
-
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see https://go.microsoft.com/fwlink/?LinkId=723263.
-        => optionsBuilder.UseSqlServer("Server=IBM-Laptop;Database=st10385722-agri-energy-connect-db;Trusted_Connection=True;TrustServerCertificate=True;");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

@@ -9,11 +9,13 @@ namespace Agri_EnergyConnect.Controllers
 {
     public class EmployeeController : Controller
     {
+        //getting services from services folder
         private readonly IProductRepository _productRepository;
         private readonly ICurrentUserService _currentUserService;
         private readonly IFarmerRepository _farmerRepository;
-
         private readonly IUserRepository _userRepository;
+
+        //constructor
         public EmployeeController(IProductRepository productRepository, ICurrentUserService currentUserService, IFarmerRepository farmerRepository, IUserRepository userRepository)
         {
             _userRepository = userRepository;
@@ -23,6 +25,7 @@ namespace Agri_EnergyConnect.Controllers
         }
         
         // GET: EmployeeController
+        //authorize tag means only user with employee role can access
         [HttpGet]
         [Authorize(Roles="employee")]
         public async Task<ActionResult> ViewFarmerIndex()
@@ -35,9 +38,9 @@ namespace Agri_EnergyConnect.Controllers
 
             foreach (var farmer in allFarmers)
             {
-                // Get the username associated with the farmer's UserId
-                var user = await _userRepository.GetById(farmer.UserId ?? 0);
-                var username = user?.Username ?? "Unknown";
+                // Get the username associated with the farmer's UserId, default to zero if not found
+                var user = await _userRepository.GetById((int)farmer.UserId);
+                var username = user?.Username;
 
                 // Add the farmer and username to the list
                 farmerDetailsWithUsernames.Add((farmer, username));
@@ -47,6 +50,7 @@ namespace Agri_EnergyConnect.Controllers
             return View(farmerDetailsWithUsernames);
         }
 
+        //This class is used to view products of a specific farmer
         [Authorize(Roles = "employee")]
         [HttpGet]
         public async Task<ActionResult> ViewFarmerProducts(int farmerId, string? productType, DateTime? startDate, DateTime? endDate)
@@ -57,6 +61,7 @@ namespace Agri_EnergyConnect.Controllers
             // Filter by product type using regex
             if (!string.IsNullOrEmpty(productType))
             {
+                //try catch when using regex
                 try
                 {
                     var regex = new Regex(productType, RegexOptions.IgnoreCase);
@@ -80,7 +85,6 @@ namespace Agri_EnergyConnect.Controllers
                     ViewBag.ErrorMessage = "No products found in the specified date range.";
                 }
             }
-
             // Pass the farmerId to the view for the reset button
             ViewBag.FarmerId = farmerId;
             return View(products);

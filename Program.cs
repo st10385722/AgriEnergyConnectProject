@@ -16,14 +16,19 @@ builder.Services.AddDbContext<St10385722AgriEnergyConnectDbContext>(options =>{
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
 });
 
+//dependency inection for my repository services
 builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped<IFarmerRepository, FarmerRepository>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
 builder.Services.AddScoped<IProductImageService, ProductImageService>();
+
+//adds httpcontext it the project, which allows the current user id
+//to be store in a http cookie
 builder.Services.AddHttpContextAccessor();
 
 builder.Services.AddScoped<ICurrentUserService, CurrentUserService>();
-//adding authentication
+//adding authentication, with a cookie expiry of 1 hour, which deletes it and prompts you
+// to login again
 builder.Services.AddAuthentication("CustomAuthentication")
     .AddCookie("CustomAuthentication", options => {
         options.ExpireTimeSpan = new TimeSpan(1,0,0);
@@ -65,9 +70,10 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}")
     .WithStaticAssets();
 
-//setting up db things for auto generation
+//setting app up to auto create roles and users for the tables`
 using (var scope = app.Services.CreateScope())
 {
+    //gets db context and password hasher
     var dbContext = scope.ServiceProvider.GetRequiredService<St10385722AgriEnergyConnectDbContext>();
     var hasher = new PasswordHasher<object>();
 
@@ -92,56 +98,42 @@ using (var scope = app.Services.CreateScope())
     var existingRoles = await dbContext.UserRoles.ToListAsync();
 
     // 2. Create Default Users
-var defaultUsers = new[]
-{
-    new { Username = "admin@test.com", Password = "Adm!n1234", Email = "admin@test.com", Role = "admin" },  
-    new { Username = "employee@test.com", Password = "Emp!oyee123", Email = "employee@test.com", Role = "employee" },  
-    new { Username = "farmer@test.com", Password = "F@rmer1234", Email = "farmer@test.com", Role = "farmer" }
-};
-
-var systemUser = new User
-{
-    UserId = Math.Abs(Guid.NewGuid().GetHashCode()),
-    Username = "system",
-    PasswordHash = hasher.HashPassword(null, "Adm!n1234"),
-    Email = "systemadmin@systemadmin.com",
-    RoleId = existingRoles.First(r => r.RoleName == "admin").RoleId,
-    CreatedBy = 0,
-    CreatedAt = DateTime.UtcNow
-};
-
-// Add the system user to the database
-if (!await dbContext.Users.AnyAsync(u => u.Username == systemUser.Username))
-{
-    dbContext.Users.Add(systemUser);
-    await dbContext.SaveChangesAsync();
-}
-
-// Use the system user's UserId as the CreatedBy value for other users
-foreach (var user in defaultUsers)
-{
-    if (!await dbContext.Users.AnyAsync(u => u.Username == user.Username))
+    var defaultUsers = new[]
     {
-        var role = existingRoles.FirstOrDefault(r => r.RoleName == user.Role);
-        if (role == null) continue;
-
-        var newUser = new User
+        new { Username = "admin@test.com", Password = "Adm!n1234", Email = "admin@test.com", Role = "admin" },  
+        new { Username = "employee@test.com", Password = "Emp!oyee123", Email = "employee@test.com", Role = "employee" },  
+        new { Username = "farmer@test.com", Password = "F@rmer1234", Email = "farmer@test.com", Role = "farmer" }
+    };
+    //a count to add a new userid incrementally
+    int count = 1;
+    // creates the generic users with foreach
+    foreach (var user in defaultUsers)
+    {
+        if (!await dbContext.Users.AnyAsync(u => u.Username == user.Username))
         {
-            UserId = Guid.NewGuid().GetHashCode(),
-            Username = user.Username,
-            PasswordHash = hasher.HashPassword(null, user.Password),
-            Email = user.Email,
-            RoleId = role.RoleId,
-            CreatedBy = systemUser.UserId,
-            CreatedAt = DateTime.UtcNow
-        };
+            var role = existingRoles.FirstOrDefault(r => r.RoleName == user.Role);
+            if (role == null) continue;
 
-        dbContext.Users.Add(newUser);
+            var newUser = new User
+            {
+                //increments user id for role assignment
+                UserId = count++,
+                Username = user.Username,
+                //hashing password
+                PasswordHash = hasher.HashPassword(null, user.Password),
+                Email = user.Email,
+                RoleId = role.RoleId,
+                CreatedBy = 0,
+                CreatedAt = DateTime.UtcNow
+            };
+
+            dbContext.Users.Add(newUser);
+        }
     }
-}
-await dbContext.SaveChangesAsync();
+    await dbContext.SaveChangesAsync();
 }
 app.Run();
 
 //references
 //https://www.farmbrite.com/post/essential-farm-records-and-data-you-need-to-be-tracking
+//https://bootswatch.com/
