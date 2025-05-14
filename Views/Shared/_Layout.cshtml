@@ -31,6 +31,7 @@
                                     @if (User.IsInRole("admin"))
                                     {
                                         <a class="dropdown-item" asp-area="" asp-controller="UserAccount" asp-action="CreateUser">Create Employee</a>
+                                        <a class="dropdown-item" asp-controller="UserAccount" asp-action="AllUsers">Manage Users</a>
                                     }
                                     @if (User.IsInRole("farmer"))
                                     {

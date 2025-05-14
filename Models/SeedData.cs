@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Agri_EnergyConnect.Models;
 
-//this class seeds the database with the values, provided it has the corrent table
+// This class seeds the database with the values, provided it has the correct table
 public static class SeedData
 {
     public static async Task InitializeAsync(St10385722AgriEnergyConnectDbContext dbContext, IProductImageService productImageService)
@@ -38,7 +38,6 @@ public static class SeedData
                 {
                     UserId = 1,
                     Username = "admin@test.com",
-                    //calls the hasher object to hash the password
                     PasswordHash = hasher.HashPassword(null, "Adm!n1234"),
                     Email = "admin@test.com",
                     RoleId = 1,
@@ -64,6 +63,26 @@ public static class SeedData
                     RoleId = 3,
                     CreatedAt = DateTime.UtcNow,
                     CreatedBy = 1
+                },
+                new User
+                {
+                    UserId = 4,
+                    Username = "livestockfarmer@test.com",
+                    PasswordHash = hasher.HashPassword(null, "L!vestock123"),
+                    Email = "livestockfarmer@test.com",
+                    RoleId = 3,
+                    CreatedAt = DateTime.UtcNow,
+                    CreatedBy = 1
+                },
+                new User
+                {
+                    UserId = 5,
+                    Username = "mangofarmer@test.com",
+                    PasswordHash = hasher.HashPassword(null, "M@ngo1234"),
+                    Email = "mangofarmer@test.com",
+                    RoleId = 3,
+                    CreatedAt = DateTime.UtcNow,
+                    CreatedBy = 1
                 }
             };
 
@@ -86,6 +105,28 @@ public static class SeedData
                     CropType = "Corn",
                     LivestockType = null,
                     NumberOfEmployees = 10
+                },
+                new Farmer
+                {
+                    FarmerId = 2,
+                    UserId = 4,
+                    FarmName = "Happy Chickens Farm",
+                    FarmType = "Livestock Farm",
+                    HavestingDate = new DateTime(2025, 6, 15),
+                    CropType = null,
+                    LivestockType = "Chickens",
+                    NumberOfEmployees = 5
+                },
+                new Farmer
+                {
+                    FarmerId = 3,
+                    UserId = 5,
+                    FarmName = "Tropical Mango Farm",
+                    FarmType = "Crop Farm",
+                    HavestingDate = new DateTime(2025, 7, 20),
+                    CropType = "Mangoes",
+                    LivestockType = null,
+                    NumberOfEmployees = 8
                 }
             };
 
@@ -106,7 +147,7 @@ public static class SeedData
                     ProductDescription = "High-quality organic corn",
                     Quantity = 100,
                     Price = 50.00m,
-                    CreatedAt = DateTime.UtcNow,
+                    CreatedAt = DateTime.UtcNow.AddDays(-7),
                     UpdatedAt = null,
                     FarmerId = 1
                 },
@@ -121,6 +162,30 @@ public static class SeedData
                     CreatedAt = DateTime.UtcNow,
                     UpdatedAt = null,
                     FarmerId = 1
+                },
+                new Product
+                {
+                    ProductId = 3,
+                    ProductName = "Free-Range Chicken",
+                    ProductType = "Livestock",
+                    ProductDescription = "Healthy free-range chickens",
+                    Quantity = 50,
+                    Price = 100.00m,
+                    CreatedAt = DateTime.UtcNow,
+                    UpdatedAt = null,
+                    FarmerId = 2
+                },
+                new Product
+                {
+                    ProductId = 4,
+                    ProductName = "Sweet Mangoes",
+                    ProductType = "Crop",
+                    ProductDescription = "Delicious tropical mangoes",
+                    Quantity = 150,
+                    Price = 40.00m,
+                    CreatedAt = DateTime.UtcNow,
+                    UpdatedAt = null,
+                    FarmerId = 3
                 }
             };
 
@@ -134,7 +199,9 @@ public static class SeedData
             var productImages = new List<(int productId, string fileName)>
             {
                 (1, "tomatoe.jpeg"),
-                (2, "corn.jpeg")
+                (2, "corn.jpeg"),
+                (3, "Chicken.jpeg"),
+                (4, "Mango.jpeg")
             };
 
             foreach (var (productId, fileName) in productImages)
@@ -150,11 +217,12 @@ public static class SeedData
                         ContentType = "image/jpeg"
                     };
 
-                    //calling the processImageAsync method from the service in order to convert it to byte array properly
+                    // Process the image and create a ProductImage entry
                     var productImage = await productImageService.ProcessImageAsync(formFile, productId);
                     productImage.ImageId = Math.Abs(Guid.NewGuid().GetHashCode());
                     productImage.CreatedAt = DateTime.UtcNow;
 
+                    // Save the product image
                     await productImageService.Insert(productImage);
                     await productImageService.SaveAsync();
 
@@ -168,7 +236,6 @@ public static class SeedData
                     }
                 }
             }
-            await productImageService.SaveAsync();
         }
     }
 }

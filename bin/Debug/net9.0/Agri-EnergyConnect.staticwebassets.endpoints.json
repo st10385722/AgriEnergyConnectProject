@@ -547,6 +547,170 @@
       ]
     },
     {
+      "Route": "content/Chicken.jpeg",
+      "AssetFile": "content/Chicken.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8774"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hWxTXnkRNwRc0+PGVkywYsuTCXFVgTlm9bV08r9XjwY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 14 May 2025 07:31:07 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-hWxTXnkRNwRc0+PGVkywYsuTCXFVgTlm9bV08r9XjwY="
+        }
+      ]
+    },
+    {
+      "Route": "content/Chicken.ta8a4we9ax.jpeg",
+      "AssetFile": "content/Chicken.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8774"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hWxTXnkRNwRc0+PGVkywYsuTCXFVgTlm9bV08r9XjwY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 14 May 2025 07:31:07 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ta8a4we9ax"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-hWxTXnkRNwRc0+PGVkywYsuTCXFVgTlm9bV08r9XjwY="
+        },
+        {
+          "Name": "label",
+          "Value": "content/Chicken.jpeg"
+        }
+      ]
+    },
+    {
+      "Route": "content/Mango.jpeg",
+      "AssetFile": "content/Mango.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7766"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8j8047MEQ9owa1hXugsADKNBNVyLcY5+R0AU/w4RM2E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 14 May 2025 07:30:49 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-8j8047MEQ9owa1hXugsADKNBNVyLcY5+R0AU/w4RM2E="
+        }
+      ]
+    },
+    {
+      "Route": "content/Mango.qu695kwbub.jpeg",
+      "AssetFile": "content/Mango.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7766"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8j8047MEQ9owa1hXugsADKNBNVyLcY5+R0AU/w4RM2E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 14 May 2025 07:30:49 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "qu695kwbub"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-8j8047MEQ9owa1hXugsADKNBNVyLcY5+R0AU/w4RM2E="
+        },
+        {
+          "Name": "label",
+          "Value": "content/Mango.jpeg"
+        }
+      ]
+    },
+    {
       "Route": "content/corn.40spo1d940.jpeg",
       "AssetFile": "content/corn.jpeg",
       "Selectors": [],

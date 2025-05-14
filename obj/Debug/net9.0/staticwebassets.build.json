@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "wHXHUPJx+dSydrY8YSVQsI2z7kJIooR8guS8UAEQEAs=",
+  "Hash": "KrL8AjWNWhE25mJl4CPBksFmLJ/3j3x/WZGL63XMolg=",
   "Source": "Agri-EnergyConnect",
   "BasePath": "_content/Agri-EnergyConnect",
   "Mode": "Default",
@@ -1487,6 +1487,27 @@
       "OriginalItemSpec": "wwwroot\\apple-touch-icon.png"
     },
     {
+      "Identity": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\content\\Chicken.jpeg",
+      "SourceId": "Agri-EnergyConnect",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\",
+      "BasePath": "_content/Agri-EnergyConnect",
+      "RelativePath": "content/Chicken#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "ta8a4we9ax",
+      "Integrity": "hWxTXnkRNwRc0+PGVkywYsuTCXFVgTlm9bV08r9XjwY=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\content\\Chicken.jpeg"
+    },
+    {
       "Identity": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\content\\corn.jpeg",
       "SourceId": "Agri-EnergyConnect",
       "SourceType": "Discovered",
@@ -1506,6 +1527,27 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\content\\corn.jpeg"
+    },
+    {
+      "Identity": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\content\\Mango.jpeg",
+      "SourceId": "Agri-EnergyConnect",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\",
+      "BasePath": "_content/Agri-EnergyConnect",
+      "RelativePath": "content/Mango#[.{fingerprint}]?.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "Fingerprint": "qu695kwbub",
+      "Integrity": "8j8047MEQ9owa1hXugsADKNBNVyLcY5+R0AU/w4RM2E=",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\content\\Mango.jpeg"
     },
     {
       "Identity": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\content\\tomatoe.jpeg",
@@ -3801,6 +3843,88 @@
       ]
     },
     {
+      "Route": "content/Chicken.jpeg",
+      "AssetFile": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\content\\Chicken.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8774"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hWxTXnkRNwRc0+PGVkywYsuTCXFVgTlm9bV08r9XjwY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 14 May 2025 07:31:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-hWxTXnkRNwRc0+PGVkywYsuTCXFVgTlm9bV08r9XjwY="
+        }
+      ]
+    },
+    {
+      "Route": "content/Chicken.ta8a4we9ax.jpeg",
+      "AssetFile": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\content\\Chicken.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "8774"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"hWxTXnkRNwRc0+PGVkywYsuTCXFVgTlm9bV08r9XjwY=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 14 May 2025 07:31:07 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "ta8a4we9ax"
+        },
+        {
+          "Name": "label",
+          "Value": "content/Chicken.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-hWxTXnkRNwRc0+PGVkywYsuTCXFVgTlm9bV08r9XjwY="
+        }
+      ]
+    },
+    {
       "Route": "content/corn.40spo1d940.jpeg",
       "AssetFile": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\content\\corn.jpeg",
       "Selectors": [],
@@ -3879,6 +4003,88 @@
         {
           "Name": "integrity",
           "Value": "sha256-BCYspcu2EUBYrD2IUgf39Fd7ZOg5Gn+FCt2utl1oYgw="
+        }
+      ]
+    },
+    {
+      "Route": "content/Mango.jpeg",
+      "AssetFile": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\content\\Mango.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7766"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8j8047MEQ9owa1hXugsADKNBNVyLcY5+R0AU/w4RM2E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 14 May 2025 07:30:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-8j8047MEQ9owa1hXugsADKNBNVyLcY5+R0AU/w4RM2E="
+        }
+      ]
+    },
+    {
+      "Route": "content/Mango.qu695kwbub.jpeg",
+      "AssetFile": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\content\\Mango.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "7766"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"8j8047MEQ9owa1hXugsADKNBNVyLcY5+R0AU/w4RM2E=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Wed, 14 May 2025 07:30:49 GMT"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "qu695kwbub"
+        },
+        {
+          "Name": "label",
+          "Value": "content/Mango.jpeg"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-8j8047MEQ9owa1hXugsADKNBNVyLcY5+R0AU/w4RM2E="
         }
       ]
     },

@@ -27,11 +27,22 @@ namespace Agri_EnergyConnect.Controllers
         // GET: EmployeeController
         //authorize tag means only user with employee role can access
         [HttpGet]
-        [Authorize(Roles="employee")]
-        public async Task<ActionResult> ViewFarmerIndex()
+        [Authorize(Roles = "employee")]
+        public async Task<ActionResult> ViewFarmerIndex(DateTime? startDate, DateTime? endDate)
         {
             // Get all farmers
             var allFarmers = await _farmerRepository.GetAll();
+
+            // Filter by harvesting date range
+            if (startDate.HasValue && endDate.HasValue)
+            {
+                allFarmers = allFarmers.Where(f => f.HavestingDate >= startDate.Value && f.HavestingDate <= endDate.Value).ToList();
+
+                if (!allFarmers.Any())
+                {
+                    ViewBag.ErrorMessage = "No farmers found in the specified harvesting date range.";
+                }
+            }
 
             // Create a list to hold farmer details with usernames
             var farmerDetailsWithUsernames = new List<(Farmer Farmer, string Username)>();

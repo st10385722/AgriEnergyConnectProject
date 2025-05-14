@@ -1,0 +1,20 @@
+﻿@model (Agri_EnergyConnect.Models.User User, string RoleName)
+
+<br />
+<br />
+<div style="max-width: 400px; margin: auto; padding: 20px; border: 1px solid #ccc; border-radius: 10px; background-color: #f9f9f9;" class="text-dark">
+    <h1>Delete User</h1>
+    <p>Are you sure you want to delete this user?</p>
+    <br />
+    <p><strong>Username:</strong> @Model.User.Username</p>
+    <p><strong>Email:</strong> @Model.User.Email</p>
+    <p><strong>Role:</strong> @Model.RoleName</p>
+    <br />
+    <form asp-action="ConfirmDeleteUser" method="post">
+        <input type="hidden" name="userId" value="@Model.User.UserId" />
+        <div style="text-align: center;">
+            <input type="submit" class="btn btn-danger" value="Delete" style="padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;" />
+            <a asp-action="AllUsers" class="btn btn-secondary" style="padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Cancel</a>
+        </div>
+    </form>
+</div>

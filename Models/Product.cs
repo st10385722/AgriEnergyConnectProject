@@ -3,11 +3,8 @@ using System.Collections.Generic;
 
 namespace Agri_EnergyConnect.Models;
 
-//Model scaffolded from database
 public partial class Product
 {
-    //Model scaffolded from database
-
     public int ProductId { get; set; }
 
     public string ProductName { get; set; } = null!;

@@ -1,0 +1,35 @@
+﻿@model IEnumerable<(Agri_EnergyConnect.Models.User User, string RoleName)>
+
+<br />
+<br />
+<div class="container text-center">
+    <h1 class="text-white">All Users</h1>
+    <br />
+    <div class="row">
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title text-primary">@item.User.Username</h5>
+                        <br />
+                        <p class="card-text">
+                            <strong>Email:</strong> @item.User.Email
+                        </p>
+                        <p class="card-text">
+                            <strong>Role:</strong> @item.RoleName
+                        </p>
+                        <p class="card-text">
+                            <a class="btn btn-warning" asp-controller="UserAccount" asp-action="EditUser" asp-route-userId="@item.User.UserId">
+                                Edit User
+                            </a>
+                            <a class="btn btn-danger" asp-controller="UserAccount" asp-action="DeleteUser" asp-route-userId="@item.User.UserId">
+                                Delete User
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

@@ -1,0 +1,30 @@
+﻿@model Agri_EnergyConnect.Models.User
+
+<br />
+<br />
+<form asp-action="EditUser" method="post" style="max-width: 400px; margin: auto; padding: 20px; border: 1px solid #ccc; border-radius: 10px; background-color: #f9f9f9;" class="text-dark">
+    <h1>Edit User</h1>
+    <p>Update the fields below to edit the user account.</p>
+    <br />
+    <input type="hidden" asp-for="UserId" />
+    <div style="margin-bottom: 15px;">
+        <label for="Username" style="display: block; font-weight: bold;">Username</label>
+        <input type="text" asp-for="Username" id="Username" value="@Model.Username" placeholder="Enter a username" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" />
+    </div>
+    <div style="margin-bottom: 15px;">
+        <label for="Email" style="display: block; font-weight: bold;">Email</label>
+        <input type="email" asp-for="Email" id="Email" value="@Model.Email" placeholder="Enter an email" required style="width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 5px;" />
+    </div>
+    <div style="margin-bottom: 15px;">
+        <label for="RoleId" style="display: block; font-weight: bold;">Role</label>
+        <select asp-for="RoleId" id="RoleId" class="form-control">
+            <option value="1" selected="@(Model.RoleId == 1)">Admin</option>
+            <option value="2" selected="@(Model.RoleId == 2)">Employee</option>
+            <option value="3" selected="@(Model.RoleId == 3)">Farmer</option>
+        </select>
+    </div>
+    <div style="text-align: center;">
+        <input type="submit" class="btn btn-primary" value="Update User" style="padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;" />
+        <a asp-action="AllUsers" class="btn btn-secondary" style="padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">Cancel</a>
+    </div>
+</form>

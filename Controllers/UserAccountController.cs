@@ -21,13 +21,26 @@ namespace Agri_EnergyConnect.Controllers
 
         private readonly ICurrentUserService _cus;
 
-        public UserAccountController(IUserRepository ur, 
-        //HttpContext httpContext, 
-        IHttpContextAccessor httpContext,
-        ICurrentUserService cus){
+        private readonly IFarmerRepository _fr;
+
+        private readonly IProductRepository _pr;
+
+        private readonly IProductImageService _pis;
+
+        public UserAccountController(
+            IUserRepository ur, 
+            IHttpContextAccessor httpContext,
+            IFarmerRepository fr,
+            IProductRepository pr,
+            IProductImageService pis,
+            ICurrentUserService cus)
+        {
             _ur = ur;
             _httpContext = httpContext;
             _cus = cus;
+            _fr = fr;
+            _pr = pr;
+            _pis = pis;
         }
         // GET: UserAccountController
         public ActionResult Index()
@@ -160,6 +173,100 @@ namespace Agri_EnergyConnect.Controllers
 
             // Redirect to the login page or home page after logout
             return RedirectToAction("Login", "UserAccount");
+        }
+
+        [Authorize(Roles = "admin")]
+        [HttpGet]
+        public async Task<ActionResult> AllUsers()
+        {
+            // Fetch all users
+            var users = await _ur.GetAll();
+
+            // Create a list to hold user data along with role names
+            var usersWithRoles = new List<(User User, string RoleName)>();
+
+            foreach (var user in users)
+            {
+                // Fetch the role name using the RoleId
+                var role = _ur.getUserRole(user.RoleId);
+                var roleName = role?.RoleName ?? "Unknown";
+
+                // Add the user and role name to the list
+                usersWithRoles.Add((user, roleName));
+            }
+
+            // Pass the list to the view
+            return View(usersWithRoles);
+        }
+
+        [Authorize(Roles = "admin")]
+        [HttpGet]
+        public async Task<IActionResult> EditUser(int userId)
+        {
+            var user = await _ur.GetById(userId);
+            if (user == null)
+            {
+                return NotFound();
+            }
+            return View(user);
+        }
+        [Authorize(Roles = "admin")]
+        [HttpPost]
+        public async Task<IActionResult> EditUser(User updatedUser)
+        {
+            var existingUser = await _ur.GetById(updatedUser.UserId);
+
+            // Update fields
+            existingUser.Username = updatedUser.Username ?? existingUser.Username;
+            existingUser.Email = updatedUser.Email ?? existingUser.Email;
+            existingUser.RoleId = updatedUser.RoleId > 0 ? updatedUser.RoleId : existingUser.RoleId;
+
+            // Save changes
+            _ur.Update(existingUser);
+            await _ur.SaveAsync();
+
+            return RedirectToAction("AllUsers", "UserAccount");
+        }
+
+        [Authorize(Roles = "admin")]
+        [HttpGet]
+        public async Task<IActionResult> DeleteUser(int userId)
+        {
+            var user = await _ur.GetById(userId);
+
+            // Fetch the role name using the RoleId
+            var role = _ur.getUserRole(user.RoleId);
+            var roleName = role?.RoleName ?? "Unknown";
+
+            // Pass the user and role name to the view
+            var userWithRole = (User: user, RoleName: roleName);
+            return View(userWithRole);
+        }
+
+        [Authorize(Roles = "admin")]
+        [HttpPost]
+        public async Task<IActionResult> ConfirmDeleteUser(int userId)
+        {
+            // Check if the user has any associated farmers
+            var farmer = await _fr.GetFarmerByUserId(userId);
+                // Fetch all products associated with the farmer
+                var products = await _pr.GetProductByFarmerId(farmer.FarmerId);
+                foreach (var product in products)
+                {
+                    var productImages = await _pis.GetProductImageById((int)product.ProductImageId);
+                    // Delete all product images associated with the product
+                    await _pis.Delete((int)product.ProductImageId);
+
+                    // Delete the product
+                    await _pr.Delete(product.ProductId);
+                }
+                // Delete the farmer
+                await _fr.Delete(farmer.FarmerId);
+            // Finally, delete the user
+            await _ur.Delete(userId);
+            await _ur.SaveAsync();
+
+            return RedirectToAction("AllUsers", "UserAccount");
         }
     }
 }

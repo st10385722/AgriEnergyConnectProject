@@ -3,7 +3,6 @@ using System.Collections.Generic;
 
 namespace Agri_EnergyConnect.Models;
 
-//Model scaffolded from database
 public partial class Farmer
 {
     public int FarmerId { get; set; }
