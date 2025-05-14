@@ -48,6 +48,30 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-jue9szk/1g/i8Bc6Z34X5OM4\u002BTz0QbOpPX/2HDgvPxs="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"7764"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022jue9szk/1g/i8Bc6Z34X5OM4\u002BTz0QbOpPX/2HDgvPxs=\u0022"},{"Name":"Last-Modified","Value":"Tue, 13 May 2025 19:12:26 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Agri-EnergyConnect/content/corn.40spo1d940.jpeg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\content\corn.jpeg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"40spo1d940"},{"Name":"integrity","Value":"sha256-BCYspcu2EUBYrD2IUgf39Fd7ZOg5Gn\u002BFCt2utl1oYgw="},{"Name":"label","Value":"_content/Agri-EnergyConnect/content/corn.jpeg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"176575"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022BCYspcu2EUBYrD2IUgf39Fd7ZOg5Gn\u002BFCt2utl1oYgw=\u0022"},{"Name":"Last-Modified","Value":"Tue, 13 May 2025 23:22:48 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Agri-EnergyConnect/content/corn.jpeg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\content\corn.jpeg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-BCYspcu2EUBYrD2IUgf39Fd7ZOg5Gn\u002BFCt2utl1oYgw="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"176575"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022BCYspcu2EUBYrD2IUgf39Fd7ZOg5Gn\u002BFCt2utl1oYgw=\u0022"},{"Name":"Last-Modified","Value":"Tue, 13 May 2025 23:22:48 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Agri-EnergyConnect/content/tomatoe.jpeg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\content\tomatoe.jpeg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-G/8C9PtvD0fVAYPce2BNOujgOC5R\u002BQE2xjXS7zsUcao="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"301619"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022G/8C9PtvD0fVAYPce2BNOujgOC5R\u002BQE2xjXS7zsUcao=\u0022"},{"Name":"Last-Modified","Value":"Tue, 13 May 2025 23:22:33 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Agri-EnergyConnect/content/tomatoe.l0xvsbyqd9.jpeg">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\content\tomatoe.jpeg'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"l0xvsbyqd9"},{"Name":"integrity","Value":"sha256-G/8C9PtvD0fVAYPce2BNOujgOC5R\u002BQE2xjXS7zsUcao="},{"Name":"label","Value":"_content/Agri-EnergyConnect/content/tomatoe.jpeg"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"301619"},{"Name":"Content-Type","Value":"image/jpeg"},{"Name":"ETag","Value":"\u0022G/8C9PtvD0fVAYPce2BNOujgOC5R\u002BQE2xjXS7zsUcao=\u0022"},{"Name":"Last-Modified","Value":"Tue, 13 May 2025 23:22:33 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Agri-EnergyConnect/content/tree_background.3wl3gsqz37.png">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\content\tree_background.png'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>

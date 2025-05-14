@@ -70,67 +70,12 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}")
     .WithStaticAssets();
 
-//setting app up to auto create roles and users for the tables`
+//setting app up to auto create roles and users for the tables
 using (var scope = app.Services.CreateScope())
 {
-    //gets db context and password hasher
     var dbContext = scope.ServiceProvider.GetRequiredService<St10385722AgriEnergyConnectDbContext>();
-    var hasher = new PasswordHasher<object>();
-
-    // Ensure the database is created
-    await dbContext.Database.EnsureCreatedAsync();
-
-    // 1. Seed Roles if they don't exist
-    if (!await dbContext.UserRoles.AnyAsync())
-    {
-        var roles = new List<UserRole>
-        {
-            new UserRole { RoleId = 1, RoleName = "admin", RoleDescription = "Administrator role" },
-            new UserRole { RoleId = 2, RoleName = "employee", RoleDescription = "Employee role" },
-            new UserRole { RoleId = 3,RoleName = "farmer", RoleDescription = "Farmer role" }
-        };
-        
-        await dbContext.UserRoles.AddRangeAsync(roles);
-        await dbContext.SaveChangesAsync();
-    }
-
-    // Get roles fresh from database
-    var existingRoles = await dbContext.UserRoles.ToListAsync();
-
-    // 2. Create Default Users
-    var defaultUsers = new[]
-    {
-        new { Username = "admin@test.com", Password = "Adm!n1234", Email = "admin@test.com", Role = "admin" },  
-        new { Username = "employee@test.com", Password = "Emp!oyee123", Email = "employee@test.com", Role = "employee" },  
-        new { Username = "farmer@test.com", Password = "F@rmer1234", Email = "farmer@test.com", Role = "farmer" }
-    };
-    //a count to add a new userid incrementally
-    int count = 1;
-    // creates the generic users with foreach
-    foreach (var user in defaultUsers)
-    {
-        if (!await dbContext.Users.AnyAsync(u => u.Username == user.Username))
-        {
-            var role = existingRoles.FirstOrDefault(r => r.RoleName == user.Role);
-            if (role == null) continue;
-
-            var newUser = new User
-            {
-                //increments user id for role assignment
-                UserId = count++,
-                Username = user.Username,
-                //hashing password
-                PasswordHash = hasher.HashPassword(null, user.Password),
-                Email = user.Email,
-                RoleId = role.RoleId,
-                CreatedBy = 0,
-                CreatedAt = DateTime.UtcNow
-            };
-
-            dbContext.Users.Add(newUser);
-        }
-    }
-    await dbContext.SaveChangesAsync();
+    var productImageService = scope.ServiceProvider.GetRequiredService<IProductImageService>();
+    await SeedData.InitializeAsync(dbContext, productImageService);
 }
 app.Run();
 

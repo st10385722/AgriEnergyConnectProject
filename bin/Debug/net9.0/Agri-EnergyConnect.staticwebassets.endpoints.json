@@ -547,6 +547,170 @@
       ]
     },
     {
+      "Route": "content/corn.40spo1d940.jpeg",
+      "AssetFile": "content/corn.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "176575"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BCYspcu2EUBYrD2IUgf39Fd7ZOg5Gn+FCt2utl1oYgw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 13 May 2025 23:22:48 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "40spo1d940"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-BCYspcu2EUBYrD2IUgf39Fd7ZOg5Gn+FCt2utl1oYgw="
+        },
+        {
+          "Name": "label",
+          "Value": "content/corn.jpeg"
+        }
+      ]
+    },
+    {
+      "Route": "content/corn.jpeg",
+      "AssetFile": "content/corn.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "176575"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"BCYspcu2EUBYrD2IUgf39Fd7ZOg5Gn+FCt2utl1oYgw=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 13 May 2025 23:22:48 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-BCYspcu2EUBYrD2IUgf39Fd7ZOg5Gn+FCt2utl1oYgw="
+        }
+      ]
+    },
+    {
+      "Route": "content/tomatoe.jpeg",
+      "AssetFile": "content/tomatoe.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=3600, must-revalidate"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "301619"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"G/8C9PtvD0fVAYPce2BNOujgOC5R+QE2xjXS7zsUcao=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 13 May 2025 23:22:33 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "integrity",
+          "Value": "sha256-G/8C9PtvD0fVAYPce2BNOujgOC5R+QE2xjXS7zsUcao="
+        }
+      ]
+    },
+    {
+      "Route": "content/tomatoe.l0xvsbyqd9.jpeg",
+      "AssetFile": "content/tomatoe.jpeg",
+      "Selectors": [],
+      "ResponseHeaders": [
+        {
+          "Name": "Accept-Ranges",
+          "Value": "bytes"
+        },
+        {
+          "Name": "Cache-Control",
+          "Value": "max-age=31536000, immutable"
+        },
+        {
+          "Name": "Content-Length",
+          "Value": "301619"
+        },
+        {
+          "Name": "Content-Type",
+          "Value": "image/jpeg"
+        },
+        {
+          "Name": "ETag",
+          "Value": "\"G/8C9PtvD0fVAYPce2BNOujgOC5R+QE2xjXS7zsUcao=\""
+        },
+        {
+          "Name": "Last-Modified",
+          "Value": "Tue, 13 May 2025 23:22:33 GMT"
+        }
+      ],
+      "EndpointProperties": [
+        {
+          "Name": "fingerprint",
+          "Value": "l0xvsbyqd9"
+        },
+        {
+          "Name": "integrity",
+          "Value": "sha256-G/8C9PtvD0fVAYPce2BNOujgOC5R+QE2xjXS7zsUcao="
+        },
+        {
+          "Name": "label",
+          "Value": "content/tomatoe.jpeg"
+        }
+      ]
+    },
+    {
       "Route": "content/tree_background.3wl3gsqz37.png",
       "AssetFile": "content/tree_background.png",
       "Selectors": [],

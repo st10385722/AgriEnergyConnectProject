@@ -17,6 +17,14 @@
       "PackagePath": "staticwebassets\\apple-touch-icon.png"
     },
     {
+      "Id": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\content\\corn.jpeg",
+      "PackagePath": "staticwebassets\\content\\corn.jpeg"
+    },
+    {
+      "Id": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\content\\tomatoe.jpeg",
+      "PackagePath": "staticwebassets\\content\\tomatoe.jpeg"
+    },
+    {
       "Id": "C:\\Users\\Niel\\source\\vsc\\Agri-EnergyConnect\\wwwroot\\content\\tree_background.png",
       "PackagePath": "staticwebassets\\content\\tree_background.png"
     },
