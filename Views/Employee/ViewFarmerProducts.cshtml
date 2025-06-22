@@ -12,7 +12,13 @@
             <!-- Sort by Product Type -->
             <div class="col-md-4">
                 <label for="productType" class="form-label">Filter by Product Type</label>
-                <input type="text" name="productType" id="productType" class="form-control" placeholder="Enter product type" />
+                <select name="productType" id="productType" class="form-control">
+                    <option value="">-- All Types --</option>
+                    @foreach (var type in ViewBag.ProductTypes as List<string>)
+                    {
+                        <option value="@type" selected="@(ViewContext.HttpContext.Request.Query["productType"] == type ? "selected" : null)">@type</option>
+                    }
+                </select>
             </div>
             <!-- Sort by Date Range -->
             <div class="col-md-4">

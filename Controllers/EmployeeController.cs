@@ -69,22 +69,19 @@ namespace Agri_EnergyConnect.Controllers
             // Get products for the farmer
             var products = await _productRepository.GetProductByFarmerId(farmerId);
 
-            // Filter by product type using regex
+            // Get unique product types for dropdown
+            //Inspired by Omar, D. 2024. Ways to bind dropdown List in ASP.NET MVC. C-SharpCorner. [Online].
+            //Available at: https://www.c-sharpcorner.com/UploadFile/deveshomar/ways-to-bind-dropdown-list-in-Asp-Net-mvc/ [Accessed 23 June 2025]
+            var productTypes = products.Select(p => p.ProductType).Distinct().ToList();
+            ViewBag.ProductTypes = productTypes;
+
+            // Filter by product type (exact match from dropdown)
             if (!string.IsNullOrEmpty(productType))
             {
-                //try catch when using regex
-                try
+                products = products.Where(p => p.ProductType == productType);
+                if (!products.Any())
                 {
-                    var regex = new Regex(productType, RegexOptions.IgnoreCase);
-                    products = products.Where(p => regex.IsMatch(p.ProductType));
-                    if(products == null){
-                        ViewBag.NoProducts = "No products found matching the specified type.";
-                    }
-                }
-                catch (ArgumentException)
-                {
-                    // Handle invalid regex
-                    ViewBag.ErrorMessage = "Invalid regex pattern.";
+                    ViewBag.NoProducts = "No products found matching the specified type.";
                 }
             }
 
@@ -92,7 +89,8 @@ namespace Agri_EnergyConnect.Controllers
             if (startDate.HasValue && endDate.HasValue)
             {
                 products = products.Where(p => p.CreatedAt >= startDate.Value && p.CreatedAt <= endDate.Value);
-                if(products == null){
+                if (!products.Any())
+                {
                     ViewBag.ErrorMessage = "No products found in the specified date range.";
                 }
             }

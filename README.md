@@ -166,6 +166,11 @@ Bootswatch. n.d. Free themes for bootstrap. [Online]. Available at: https://boot
 
 W3School. n.d. HTML Styles - CSS. [Online]. Available at: https://www.w3schools.com/html/html_css.asp [Accessed 12 May 2025]
 
+## Changes made
+1. Updated the product type sorting function for employees to use a `drop down` rather than `typing out` the category, allowing for a more seamless flow of logic
+
+2. Updated the `homepage` view to have a semi- transparent background to allow for `more readable` text 
+
 
 G, Courtney J. 2023. Essential farm records and data you need to be tracking, FarmBite.com. 27 September 2023. [Online]. Available at: //https://www.farmbrite.com/post/essential-farm-records-and-data-you-need-to-be-tracking [Accessed 12 May 2025]
 

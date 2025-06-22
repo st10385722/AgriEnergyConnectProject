@@ -3,89 +3,99 @@
     var farmDetailsExist = TempData["FarmerDetailsAlreadyExistError"];
     var farmDetailsNotSetup = TempData["FarmerDetailsNotSetup"];
 }
+<!-- Inspired by Copilot. 2025. How to add a border around a button?. [Online]. Accessed [23 June 2025]-->
+<style>
+    .btn {
+        border: 1px solid #fff !important;
+    }
+</style>
 <br />
 <br />
-<div class="text-center text-white">
-    <!-- This changes the content of the home index depending on the role of the
-        of the currently logged in user
-    -->
-    @if (!User.Identity.IsAuthenticated)
-    {
-        <h2 class="text-white">Welcome to the Agri Energy Connect</h2>
-        <br />
-        <h4 class="text-white">The hub for all green farming practices</h4>
-        <br />
-        <br />
-        <h6 class="text-white">No account? No problem! Email the Agri Energy Connect team at 
-            <a style="background-color: bisque;" href="mailto:accounts@agri-energy-connect.com">accounts@agri-energy-connect.com</a> to get started</h6>
-        <br />
-        <h6 class="text-white">Already have an account? Click the button below to get started</h6>
-        <a asp-controller="UserAccount" asp-action="Login" class="btn btn-primary">Login</a>
-    }
-    else
-    {
-        <h2 class="text-white">Welcome to Agri Energy Connect</h2>
-        <br />
-        <h4 class="text-white">Choose an action below to get started:</h4>
-        <br />
-
-        <!--If you are in the farmer role-->
-        @if (User.IsInRole("farmer"))
+<!-- PoetikSage. 2021. How to give opacity to a color with hex value in css? [duplicate]. StackOverflow, 15 June 2021. [Online].
+     Available at: https://stackoverflow.com/questions/67981559/how-to-give-opacity-to-a-color-with-hex-value-in-css [Accessed 23 June 2025]
+-->
+<div style="background-color: #78c2adBF; border-radius: 16px; padding: 15px; margin: 0 auto; max-width: 900px;">
+    <div class="text-center text-white">
+        <!-- This changes the content of the home index depending on the role of the
+            of the currently logged in user
+        -->
+        @if (!User.Identity.IsAuthenticated)
         {
-            <!--Displays buttons for farmer related actions-->
-            <div class="mb-4">
-                <h5 class="text-white">If you're looking to start selling, click below to add a product:</h5>
-                <a asp-controller="Product" asp-action="CreateProduct" class="btn btn-success">Add Product</a>
-            </div>
-            <div class="mb-4">
-                <h5 class="text-white">View and manage your products:</h5>
-                <a asp-controller="Product" asp-action="MyProducts" class="btn btn-info">My Products</a>
-                <!--Checks if the user has setup their farmer details before they can add products and see their products-->
-                @if(farmDetailsNotSetup != null){
-                    <div class="alert alert-danger mt-2">
-                        @farmDetailsNotSetup
-                    </div>
-                }
-            </div>
-            <div class="mb-4">
-                <h5 class="text-white">Click here if you have not setup your details</h5>
-                    <a asp-controller="Farmer" asp-action="FillFarmerDetails" class="btn btn-info">Enter Farmer details</a>
-                <br/>
-                <!--If the farmer details are Already added, This button will display an error-->
-                @if(farmDetailsExist != null){
-                    <div class="alert alert-danger mt-2">
-                        @farmDetailsExist
-                    </div>
-                }
-            </div>
+            <h2 class="text-white">Welcome to the Agri Energy Connect</h2>
+            <br />
+            <h4 class="text-white">The hub for all green farming practices</h4>
+            <br />
+            <br />
+            <h6 class="text-white">No account? No problem! Email the Agri Energy Connect team at 
+                <a style="background-color: bisque;" href="mailto:accounts@agri-energy-connect.com">accounts@agri-energy-connect.com</a> to get started</h6>
+            <br />
+            <h6 class="text-white">Already have an account? Click the button below to get started</h6>
+            <a asp-controller="UserAccount" asp-action="Login" class="btn btn-primary">Login</a>
         }
-
-        <!--If you are in the employee role-->
-        @if (User.IsInRole("employee"))
+        else
         {
-            <!--buttons for employee actions-->
-            <div class="mb-4">
-                <h5 class="text-white">Here you can see all farmers:</h5>
-                <a asp-controller="Employee" asp-action="ViewFarmerIndex" class="btn btn-primary">View Farmers</a>
-            </div>
-            <div class="mb-4">
-                <h5 class="text-white">Click below to create a new farmer account:</h5>
-                <a asp-controller="UserAccount" asp-action="CreateUser" class="btn btn-success">Create Farmer</a>
-            </div>
-        }
+            <h2 class="text-white">Welcome to Agri Energy Connect</h2>
+            <br />
+            <h4 class="text-white">Choose an action below to get started:</h4>
+            <br />
 
-        <!--If you are in the admin role-->
-        @if (User.IsInRole("admin"))
-        {
-            <!--buttons for admin related actions-->
-            <div class="mb-4">
-                <h5 class="text-white">Click below to create a new employee account:</h5>
-                <a asp-controller="UserAccount" asp-action="CreateUser" class="btn btn-warning">Create Employee</a>
-            </div>
-            <div class="mb-4">
-                 <h5 class="text-white">Manage user accounts:</h5>
-                <a asp-controller="UserAccount" asp-action="AllUsers" class="btn btn-primary">View All Users</a>
-            </div>
+            <!--If you are in the farmer role-->
+            @if (User.IsInRole("farmer"))
+            {
+                <!--Displays buttons for farmer related actions-->
+                <div class="mb-4">
+                    <h5 class="text-white">If you're looking to start selling, click below to add a product:</h5>
+                    <a asp-controller="Product" asp-action="CreateProduct" class="btn btn-success">Add Product</a>
+                </div>
+                <div class="mb-4">
+                    <h5 class="text-white">View and manage your products:</h5>
+                    <a asp-controller="Product" asp-action="MyProducts" class="btn btn-info">My Products</a>
+                    <!--Checks if the user has setup their farmer details before they can add products and see their products-->
+                    @if(farmDetailsNotSetup != null){
+                        <div class="alert alert-danger mt-2">
+                            @farmDetailsNotSetup
+                        </div>
+                    }
+                </div>
+                <div class="mb-4">
+                    <h5 class="text-white">Click here if you have not setup your details</h5>
+                        <a asp-controller="Farmer" asp-action="FillFarmerDetails" class="btn btn-info">Enter Farmer details</a>
+                    <br/>
+                    <!--If the farmer details are Already added, This button will display an error-->
+                    @if(farmDetailsExist != null){
+                        <div class="alert alert-danger mt-2">
+                            @farmDetailsExist
+                        </div>
+                    }
+                </div>
+            }
+
+            <!--If you are in the employee role-->
+            @if (User.IsInRole("employee"))
+            {
+                <!--buttons for employee actions-->
+                <div class="mb-4">
+                    <h5 class="text-white">Here you can see all farmers:</h5>
+                    <a asp-controller="Employee" asp-action="ViewFarmerIndex" class="btn btn-primary">View Farmers</a>
+                </div>
+                <div class="mb-4">
+                    <h5 class="text-white">Click below to create a new farmer account:</h5>
+                    <a asp-controller="UserAccount" asp-action="CreateUser" class="btn btn-success">Create Farmer</a>
+                </div>
+            }
+
+            <!--If you are in the admin role-->
+            @if (User.IsInRole("admin"))
+            {
+                <!--buttons for admin related actions-->
+                <div class="mb-4">
+                    <h5 class="text-white">Click below to create a new employee account:</h5>
+                    <a asp-controller="UserAccount" asp-action="CreateUser" class="btn btn-info">Create Employee</a>
+                </div>
+                <div class="mb-4">
+                     <h5 class="text-white">Manage user accounts:</h5>
+                    <a asp-controller="UserAccount" asp-action="AllUsers" class="btn btn-primary">View All Users</a>
+                </div>
+            }
         }
-    }
-</div>
+    </div>
