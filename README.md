@@ -182,4 +182,10 @@ AppliedK. 2024. ASP NET Core How to seed data at design time & run time by DbCon
 
 GeeksForGeeks.2024. Repository design pattern, 1 November 2024. [Online]. Available at: https://www.geeksforgeeks.org/repository-design-pattern/ [Accessed 12 May 2025]
 
+Omar, D. 2024. Ways to bind dropdown List in ASP.NET MVC. C-SharpCorner. [Online]. Available at: https://www.c-sharpcorner.com/UploadFile/deveshomar/ways-to-bind-dropdown-list-in-Asp-Net-mvc/ [Accessed 23 June 2025]
+
+PoetikSage. 2021. How to give opacity to a color with hex value in css? [duplicate]. StackOverflow, 15 June 2021. [Online]. Available at: https://stackoverflow.com/questions/67981559/how-to-give-opacity-to-a-color-with-hex-value-in-css [Accessed 23 June 2025]
+
+
+
 
