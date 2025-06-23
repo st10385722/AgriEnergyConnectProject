@@ -215,6 +215,11 @@ namespace Agri_EnergyConnect.Controllers
         [Authorize(Roles = "farmer,employee")]
         //gets passed values from the view asp-route tags
         public async Task<IActionResult> DeleteProduct(int productId, int productImageId){
+
+            //getting the farmer id to pass back to the view
+
+            var product = await _productRepository.GetById(productId);
+            var farmerId = product.FarmerId;
             //delete image first
             await _productImageService.Delete(productImageId);
             await _productImageService.SaveAsync();
@@ -225,7 +230,8 @@ namespace Agri_EnergyConnect.Controllers
             return RedirectToAction("MyProducts");
             }
             if(User.IsInRole("employee")){
-                return RedirectToAction("ViewFarmerProducts", "Employee");
+                //passes farmer id back to view
+                return RedirectToAction("ViewFarmerProducts", "Employee", new {farmerId});
             }
             return RedirectToAction("Index", "Home");
         }

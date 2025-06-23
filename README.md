@@ -154,6 +154,11 @@ This application has 3 roles, which separate the functions of the application. T
 
 - Farmers possess the ability to create a new product, view their own products, and to fill in their farm details. This includes its name, their types of crops and livestock as well as their harvesting date
 
+## Changes made
+1. Updated the product type sorting function for employees to use a `drop down` rather than `typing out` the category, allowing for a more seamless flow of logic
+
+2. Updated the `homepage` view to have a semi- transparent background to allow for `more readable` text 
+
 
 🚀 **With this guide, you can now explore the Argi Energy Connect app and witness its future potential**
 
@@ -166,7 +171,6 @@ Bootswatch. n.d. Free themes for bootstrap. [Online]. Available at: https://boot
 
 W3School. n.d. HTML Styles - CSS. [Online]. Available at: https://www.w3schools.com/html/html_css.asp [Accessed 12 May 2025]
 
-
 G, Courtney J. 2023. Essential farm records and data you need to be tracking, FarmBite.com. 27 September 2023. [Online]. Available at: //https://www.farmbrite.com/post/essential-farm-records-and-data-you-need-to-be-tracking [Accessed 12 May 2025]
 
 
@@ -178,4 +182,7 @@ AppliedK. 2024. ASP NET Core How to seed data at design time & run time by DbCon
 
 GeeksForGeeks.2024. Repository design pattern, 1 November 2024. [Online]. Available at: https://www.geeksforgeeks.org/repository-design-pattern/ [Accessed 12 May 2025]
 
+Omar, D. 2024. Ways to bind dropdown List in ASP.NET MVC. C-SharpCorner. [Online]. Available at: https://www.c-sharpcorner.com/UploadFile/deveshomar/ways-to-bind-dropdown-list-in-Asp-Net-mvc/ [Accessed 23 June 2025]
+
+PoetikSage. 2021. How to give opacity to a color with hex value in css? [duplicate]. StackOverflow, 15 June 2021. [Online]. Available at: https://stackoverflow.com/questions/67981559/how-to-give-opacity-to-a-color-with-hex-value-in-css [Accessed 23 June 2025]
 
