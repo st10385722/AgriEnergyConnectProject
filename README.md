@@ -186,6 +186,3 @@ Omar, D. 2024. Ways to bind dropdown List in ASP.NET MVC. C-SharpCorner. [Online
 
 PoetikSage. 2021. How to give opacity to a color with hex value in css? [duplicate]. StackOverflow, 15 June 2021. [Online]. Available at: https://stackoverflow.com/questions/67981559/how-to-give-opacity-to-a-color-with-hex-value-in-css [Accessed 23 June 2025]
 
-
-
-
